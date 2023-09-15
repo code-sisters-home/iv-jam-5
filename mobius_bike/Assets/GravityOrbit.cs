@@ -9,6 +9,8 @@ public class GravityOrbit : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if (other.GetComponent<GravityControlScript>())
+        {
             other.GetComponent<GravityControlScript>().Gravity = this.GetComponent<GravityOrbit>();
+        }
     }
 }

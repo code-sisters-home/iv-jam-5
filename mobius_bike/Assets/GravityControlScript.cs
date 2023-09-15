@@ -28,10 +28,10 @@ public class GravityControlScript : MonoBehaviour
             }
             else
             {
-                gravityUp = (transform.position - Gravity.transform.localPosition).normalized;
+                gravityUp = (transform.position - Gravity.transform.position).normalized;
             }
             Vector3 localUp = transform.up;
-            Quaternion targetrotation = Quaternion.FromToRotation(localUp, gravityUp) * transform.rotation;
+            Quaternion targetRotation = Quaternion.FromToRotation(localUp, gravityUp) * transform.rotation;
 
             transform.up = Vector3.Lerp(transform.up, gravityUp, RotationSpeed * Time.deltaTime);
 

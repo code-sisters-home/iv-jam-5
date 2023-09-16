@@ -20,7 +20,7 @@ public class Thunder : MonoBehaviour
         {
             nextActionTime = Time.time + period;
 
-            GameObject lightningObject = Instantiate(lightning, transform.position, Quaternion.identity) as GameObject;
+            //GameObject lightningObject = Instantiate(lightning, transform.position, Quaternion.identity) as GameObject;
         }
     }
 }

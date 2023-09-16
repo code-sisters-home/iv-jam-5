@@ -770,6 +770,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 844f6d58b66140e46a93383f674a0dbc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  period: 5
 --- !u!1 &526303294 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -1684543897826104800, guid: 75ffb0a00c85a18499b87adcc13b6ddc,

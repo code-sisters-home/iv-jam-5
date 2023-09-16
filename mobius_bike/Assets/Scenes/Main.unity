@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.08029469, g: 0.09969518, b: 0.30112675, a: 1}
+  m_IndirectSpecularColor: {r: 0.0801786, g: 0.09957077, b: 0.30097464, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -849,6 +849,75 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 571120503}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &599830863
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2844312704262242060, guid: 32a901aec3638404e9a6baa1b9c0607b,
+        type: 3}
+      propertyPath: m_Name
+      value: Path
+      objectReference: {fileID: 0}
+    - target: {fileID: 2844312704262242062, guid: 32a901aec3638404e9a6baa1b9c0607b,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 2844312704262242062, guid: 32a901aec3638404e9a6baa1b9c0607b,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2844312704262242062, guid: 32a901aec3638404e9a6baa1b9c0607b,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2844312704262242062, guid: 32a901aec3638404e9a6baa1b9c0607b,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2844312704262242062, guid: 32a901aec3638404e9a6baa1b9c0607b,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2844312704262242062, guid: 32a901aec3638404e9a6baa1b9c0607b,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2844312704262242062, guid: 32a901aec3638404e9a6baa1b9c0607b,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2844312704262242062, guid: 32a901aec3638404e9a6baa1b9c0607b,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2844312704262242062, guid: 32a901aec3638404e9a6baa1b9c0607b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2844312704262242062, guid: 32a901aec3638404e9a6baa1b9c0607b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2844312704262242062, guid: 32a901aec3638404e9a6baa1b9c0607b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 32a901aec3638404e9a6baa1b9c0607b, type: 3}
 --- !u!1 &631908711 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5213172716796946149, guid: 1e993d5f1fc54074386f2881860a7f2f,
@@ -2086,6 +2155,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1224566321}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1231866445 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2844312704262242061, guid: 32a901aec3638404e9a6baa1b9c0607b,
+    type: 3}
+  m_PrefabInstance: {fileID: 599830863}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1acf658eaaebd6f43ad61a743cb7d9be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1267202901
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2748,6 +2829,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1781577437856040279, guid: 0bc8d8fc40fb1fe42a6d7a6e2e73223d,
+        type: 3}
+      propertyPath: path
+      value: 
+      objectReference: {fileID: 1231866445}
     - target: {fileID: 1784832931746808754, guid: 0bc8d8fc40fb1fe42a6d7a6e2e73223d,
         type: 3}
       propertyPath: Gravity

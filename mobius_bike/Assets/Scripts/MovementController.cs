@@ -21,6 +21,7 @@ public class MovementController : MonoBehaviour
         //velocity = direction + speed
         Vector3 velocity = direction * Speed;
         // Move (velocity * timeDeltaTime)
-        controller.Move(velocity * Time.deltaTime);
+        //controller.Move(velocity * Time.deltaTime);
+        transform.position = Vector3.MoveTowards(transform.position, velocity, Time.deltaTime * Speed);
     }
 }

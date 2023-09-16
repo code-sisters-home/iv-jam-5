@@ -7,12 +7,14 @@ public class TopPanel : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI _amount;
     [SerializeField] private GameObject _achievementsScreen;
+    [SerializeField] private GameObject _collectionsScreen;
 
     private void OnEnable()
     {
         Statistics.OnStatsChanged += UpdateScreen;
         UpdateScreen();
-        OnClose();
+        OnClose(_achievementsScreen);
+        OnClose(_collectionsScreen);
     }
 
     private void OnDisable()
@@ -25,13 +27,7 @@ public class TopPanel : MonoBehaviour
         _amount.SetText("{0}", GameMaster.Instance.Statistics.Gold);
     }
 
-    public void OnClose()
-    {
-        _achievementsScreen.SetActive(false);
-    }
+    public void OnClose(GameObject obj) => obj.SetActive(false);
 
-    public void OpenAchievements()
-    {
-        _achievementsScreen.SetActive(true);
-    }
+    public void OnOpen(GameObject obj) => obj.SetActive(true);
 }

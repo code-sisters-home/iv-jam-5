@@ -6,7 +6,8 @@ public class FollowPath : MonoBehaviour
 {
 
     public MovingPath path;
-    public float speed = 1;
+    public float speed = 1f;
+    public float rotationSpeed = 1f;
     public float max_disance = 0.1f;
 
     private IEnumerator<Transform> pointInPath;
@@ -34,7 +35,11 @@ public class FollowPath : MonoBehaviour
 
         var distanceSquer = (transform.position - pointInPath.Current.position).sqrMagnitude; //достаточно ли близко к point
 
-        if(distanceSquer < max_disance * max_disance)
+        //Vector3 targetDirection = pointInPath.Current.position - transform.position;
+        //Quaternion targetRotation = Quaternion.LookRotation(targetDirection);
+        transform.rotation = Quaternion.Lerp(transform.rotation, pointInPath.Current.rotation, rotationSpeed * Time.deltaTime);
+
+        if (distanceSquer < max_disance * max_disance)
         {
             pointInPath.MoveNext();
             transform.LookAt(pointInPath.Current);

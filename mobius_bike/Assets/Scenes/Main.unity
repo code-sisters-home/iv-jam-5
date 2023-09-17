@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.0801786, g: 0.09957077, b: 0.30097464, a: 1}
+  m_IndirectSpecularColor: {r: 0.08029469, g: 0.09969518, b: 0.30112675, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -629,29 +629,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 4943124068413644408}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &518588120 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 100000, guid: fd368be74e0578d4a839c32767696a98,
-    type: 3}
-  m_PrefabInstance: {fileID: 1299589717}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &518588121
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 518588120}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 844f6d58b66140e46a93383f674a0dbc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  lightningPrefab: {fileID: 0}
-  targetObject: {fileID: 0}
-  lightningPeriod: 2
-  evilnessPeriod: 20
-  evilnessTime: 5
 --- !u!1 &526303294 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -1684543897826104800, guid: 75ffb0a00c85a18499b87adcc13b6ddc,
@@ -965,7 +942,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 631908711}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 455d3f030273ab54196b0c04bae918d0, type: 3}
   m_Name: 
@@ -2704,7 +2681,7 @@ PrefabInstance:
     - target: {fileID: 4460498382042132889, guid: 84e702e6177a9344dbbf6c97447abc59,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -11.1
+      value: -23
       objectReference: {fileID: 0}
     - target: {fileID: 4460498382042132889, guid: 84e702e6177a9344dbbf6c97447abc59,
         type: 3}
@@ -2714,7 +2691,7 @@ PrefabInstance:
     - target: {fileID: 4460498382042132889, guid: 84e702e6177a9344dbbf6c97447abc59,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 22.9
+      value: 36.1
       objectReference: {fileID: 0}
     - target: {fileID: 4460498382042132889, guid: 84e702e6177a9344dbbf6c97447abc59,
         type: 3}

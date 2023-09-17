@@ -72,3 +72,5 @@ crashlytics-build.properties
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
 mobius_bike/mobius_bike.zip
+mobius_bike/mobius_bike_without_ui.zip
+mobius_bike/mobius_bike_.zip

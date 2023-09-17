@@ -37,6 +37,7 @@ public class FollowPath : MonoBehaviour
         if(distanceSquer < max_disance * max_disance)
         {
             pointInPath.MoveNext();
+            transform.LookAt(pointInPath.Current);
         }
     }
 }

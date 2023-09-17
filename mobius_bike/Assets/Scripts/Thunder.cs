@@ -23,7 +23,7 @@ public class Thunder : MonoBehaviour
     {
 		if(Time.time > nextEvilnessTime && Time.time < nextEvilnessTime + evilnessTime)
 		{
-			float evilness = 1 - Mathf.Abs((Time.time - nextEvilnessTime)/evilnessTime - 0.5f)*2.0f;
+			float evilness = 1 - Mathf.Pow(((Time.time - nextEvilnessTime)/evilnessTime - 0.5f)*2.0f, 6.0f);
 			float k = Mathf.Lerp(1.0f, 0.3f, evilness);
 			GetComponent<Renderer>().material.SetColor("_BaseColor", new Color(k, k, k, 1));
 			

@@ -47,6 +47,9 @@
 День, когда мы правили баги и заливали билд. В итоге так и не залили правильно.
 
 Но страничка получилась красивая:
+
+https://zaza.itch.io/mobius-bike
+
 ![site](https://github.com/code-sisters-home/iv-jam-5/assets/5063376/4eac1fac-232e-4a46-97a2-e42c888587a4)
 
 https://zaza.itch.io/mobius-bike

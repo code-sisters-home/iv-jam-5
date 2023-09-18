@@ -50,6 +50,7 @@
 
 https://zaza.itch.io/mobius-bike
 
-![site](https://github.com/code-sisters-home/iv-jam-5/assets/5063376/4eac1fac-232e-4a46-97a2-e42c888587a4)
+##
+## Видео:
+[![Watch the video](https://img.youtube.com/vi/08piy3F4JzE/sddefault.jpg)](https://youtu.be/08piy3F4JzE)
 
-https://zaza.itch.io/mobius-bike

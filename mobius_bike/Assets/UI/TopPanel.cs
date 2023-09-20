@@ -6,6 +6,7 @@ using UnityEngine;
 public class TopPanel : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI _amount;
+    [SerializeField] private TextMeshProUGUI _gemsAmount;
     [SerializeField] private GameObject _achievementsScreen;
     [SerializeField] private GameObject _collectionsScreen;
 
@@ -25,6 +26,7 @@ public class TopPanel : MonoBehaviour
     private void UpdateScreen()
     {
         _amount.SetText("{0}", GameMaster.Instance.Statistics.Gold);
+        _gemsAmount.SetText("{0}", GameMaster.Instance.Statistics.Gems);
     }
 
     public void OnClose(GameObject obj) => obj.SetActive(false);

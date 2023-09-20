@@ -6,14 +6,15 @@ using UnityEngine;
 
 public class Statistics : MonoBehaviour
 {
-    public static event Action OnAchievementsChanged = () => {};
-    public static event Action OnCollectionChanged = () => {};
-    public static event Action OnStatsChanged = () => {};
+    public static event Action OnAchievementsChanged = () => { };
+    public static event Action OnCollectionChanged = () => { };
+    public static event Action OnStatsChanged = () => { };
 
     public List<AchievementData> achievementDatas = new List<AchievementData>();
     public List<CollectionItemData> collectionDatas = new List<CollectionItemData>();
 
-    public int Gold;
+    [NonSerialized] public int Gold = 100;
+    [NonSerialized] public int Gems = 10;
 
     private void Awake()
     {
@@ -25,6 +26,8 @@ public class Statistics : MonoBehaviour
                 maxAmount: laps,
                 reward: laps * 10));
         }
+
+        GetCollectionItem();
     }
 
     public void IncreaseLaps()

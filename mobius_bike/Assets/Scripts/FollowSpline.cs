@@ -6,7 +6,7 @@ public class FollowSpline : MonoBehaviour
 {
 
     public CatmullRomSpline path;
-    public float speed = 0.0001f;
+    public float speed = 3f;
 
     //private IEnumerator<Transform> pointInPath;
 

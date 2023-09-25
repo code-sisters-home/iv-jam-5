@@ -1,4 +1,4 @@
-using System.Collections;
+п»їusing System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -11,12 +11,16 @@ public class FollowPath : MonoBehaviour
     public float max_disance = 0.1f;
 
     private IEnumerator<Transform> pointInPath;
+    private MovingPath currentPath;
 
     void Start()
     {
         if (path == null)
             return;
-        pointInPath = path.GetNextPoint();
+
+        currentPath = path;
+
+        pointInPath = currentPath.GetNextPoint();
 
         pointInPath.MoveNext();
 
@@ -31,12 +35,22 @@ public class FollowPath : MonoBehaviour
         if (pointInPath == null || pointInPath.Current == null)
             return;
 
-        transform.position = Vector3.MoveTowards(transform.position, pointInPath.Current.position, Time.deltaTime * speed);
+        Vector3 leftRight = Vector3.zero;
+        //РїСЂРёР±Р°РІРёС‚СЊ Рє pointInPath.Current.position.x  
+        if (Input.GetKey(KeyCode.A))
+        {
+            leftRight = Vector3.right;
+        }
 
-        var distanceSquer = (transform.position - pointInPath.Current.position).sqrMagnitude; //достаточно ли близко к point
+        if (Input.GetKey(KeyCode.D))
+        {
+            leftRight = Vector3.left;
+        }
 
-        //Vector3 targetDirection = pointInPath.Current.position - transform.position;
-        //Quaternion targetRotation = Quaternion.LookRotation(targetDirection);
+        transform.position = Vector3.MoveTowards(transform.position, pointInPath.Current.position + leftRight * 20, Time.deltaTime * speed);
+
+        var distanceSquer = (transform.position - pointInPath.Current.position).sqrMagnitude; //РґРѕСЃС‚Р°С‚РѕС‡РЅРѕ Р»Рё Р±Р»РёР·РєРѕ Рє point
+
         transform.rotation = Quaternion.Lerp(transform.rotation, pointInPath.Current.rotation, rotationSpeed * Time.deltaTime);
 
         if (distanceSquer < max_disance * max_disance)
@@ -44,5 +58,7 @@ public class FollowPath : MonoBehaviour
             pointInPath.MoveNext();
             transform.LookAt(pointInPath.Current);
         }
+
+        
     }
 }

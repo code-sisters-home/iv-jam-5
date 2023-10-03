@@ -6,6 +6,7 @@ TagManager:
   tags:
   - road
   - bike
+  - drop
   layers:
   - Default
   - TransparentFX

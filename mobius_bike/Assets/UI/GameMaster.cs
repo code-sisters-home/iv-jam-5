@@ -8,6 +8,7 @@ public class GameMaster : MonoBehaviour
     public static GameMaster Instance { get; private set; }
     public AudioManager AudioManager { get; private set; }
     public Statistics Statistics { get; private set; }
+    public DropGenerator DropGenerator { get; private set; }
 
     public SpriteAtlas SpriteAtlas;
 
@@ -21,6 +22,7 @@ public class GameMaster : MonoBehaviour
         Instance = this;
         AudioManager = GetComponentInChildren<AudioManager>();
         Statistics = GetComponentInChildren<Statistics>();
+        DropGenerator = GetComponentInChildren<DropGenerator>();
 
         AudioManager.Init();
         AudioManager.PlayMusic(SoundEvents.menu_background);

@@ -12,5 +12,11 @@ public class CounterLaps : MonoBehaviour
             return;
         if(other == point)
             GameMaster.Instance.Statistics.IncreaseLaps();
+
+        if (other.tag.Equals("drop"))
+        {
+            GameMaster.Instance.Statistics.GetCollectionItem();
+            Destroy(other.gameObject);
+        }
     }
 }

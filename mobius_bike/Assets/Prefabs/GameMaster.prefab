@@ -31,6 +31,7 @@ Transform:
   m_Children:
   - {fileID: 413771790084111500}
   - {fileID: 413771790245600038}
+  - {fileID: 3064362739297059174}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -48,6 +49,52 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SpriteAtlas: {fileID: 4343727234628468602, guid: 646e461c6ae89c8488c2823f57248200,
     type: 2}
+--- !u!1 &5169705391836374297
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3064362739297059174}
+  - component: {fileID: 5686303240754677378}
+  m_Layer: 0
+  m_Name: DropGenerator
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3064362739297059174
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5169705391836374297}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 413771791165940775}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5686303240754677378
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5169705391836374297}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c406b2fae41e0548a9d14c90d509344, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _points: []
+  _dropItem: {fileID: 0}
 --- !u!1001 &1978671016166601344
 PrefabInstance:
   m_ObjectHideFlags: 0

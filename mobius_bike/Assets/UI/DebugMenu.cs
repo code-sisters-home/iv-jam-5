@@ -6,4 +6,5 @@ public class DebugMenu : MonoBehaviour
 {
     public void IncreaseLaps() => GameMaster.Instance.Statistics.IncreaseLaps();
     public void GetCollectionItem() => GameMaster.Instance.Statistics.GetCollectionItem();
+    public void DropItem() => GameMaster.Instance.DropGenerator.DropSomething();
 }

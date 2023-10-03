@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 26ecfdcf308cb2d4aa09e188c938b40b
+guid: c144b0c000aadfe4fa2c1a17ad660f5b
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
@@ -7,13 +7,18 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Material
-    second: {fileID: 2100000, guid: 3be9d68f96a05134e87a298b31d1c25b, type: 2}
+      name: Cardboard
+    second: {fileID: 2100000, guid: 778648a8b2b9352458e06ed48ca489bd, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Material.001
-    second: {fileID: 2100000, guid: 7adaaf8dca5c2bb4a8def2dd3681b422, type: 2}
+      name: Tape
+    second: {fileID: 2100000, guid: 72de402fd484bff48b750fd7a0d9044f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: cardboard boxes warning symbols
+    second: {fileID: 2100000, guid: 4af7cbe0a58f8c843bb44f4b56859c47, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

@@ -8,6 +8,7 @@ public class FollowSpline : MonoBehaviour
 
     public CatmullRomSpline path;
     public float speed = 3f;
+	public bool useControls = false;
 	public float speedTurn = 3f;
 
 	bool isLeft = false;
@@ -44,8 +45,8 @@ public class FollowSpline : MonoBehaviour
 		//transform.LookAt(pos);
 
 		
-		isLeft = Input.GetKey(KeyCode.A);
-		isRight = Input.GetKey(KeyCode.D);
+		isLeft = Input.GetKey(KeyCode.A) && useControls;
+		isRight = Input.GetKey(KeyCode.D) && useControls;
 		if (Input.GetKey(KeyCode.A))
 			vecTurn = transform.TransformDirection(Vector3.left);
 		else if (Input.GetKey(KeyCode.D))

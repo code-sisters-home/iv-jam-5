@@ -1,6 +1,7 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Assertions;
 
 public class FollowSpline : MonoBehaviour
 {
@@ -24,8 +25,7 @@ public class FollowSpline : MonoBehaviour
 
     void Start()
     {
-        if (path == null)
-            return;
+		Assert.IsNotNull(path, "потерялся референс к дороге");
 				
 		Vector3 pos = path.GetPosition(0);
 

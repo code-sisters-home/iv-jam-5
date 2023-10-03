@@ -8,8 +8,13 @@ public class FollowSpline : MonoBehaviour
 
     public CatmullRomSpline path;
     public float speed = 3f;
+	public float speedTurn = 3f;
 
-    //private IEnumerator<Transform> pointInPath;
+	bool isLeft = false;
+	bool isRight = false;
+
+	Vector3 vecTurn = Vector3.zero;
+	//private IEnumerator<Transform> pointInPath;
 
 	void OnDrawGizmos()
 	{
@@ -38,11 +43,22 @@ public class FollowSpline : MonoBehaviour
 		//Vector3 pos = path.GetPosition(transform, ref index, ref t);
 		//transform.LookAt(pos);
 
+		
+		isLeft = Input.GetKey(KeyCode.A);
+		isRight = Input.GetKey(KeyCode.D);
+		if (Input.GetKey(KeyCode.A))
+			vecTurn = transform.TransformDirection(Vector3.left);
+		else if (Input.GetKey(KeyCode.D))
+			vecTurn = transform.TransformDirection(Vector3.right);
+		else
+			vecTurn = Vector3.zero;
+
 		//transform.position += transform.TransformDirection(Vector3.forward).normalized * Time.deltaTime * speed;
 		float s = Time.timeSinceLevelLoad * speed;
-		transform.position = path.GetPosition(s);
+		transform.position = path.GetPosition(s) + vecTurn * speedTurn;
 		int index = Mathf.FloorToInt(s);
 		transform.rotation = Quaternion.Lerp(path.GetPoint(index).rotation, path.GetPoint(index+1).rotation, s-index);
-    }
+
+	}
 
 }

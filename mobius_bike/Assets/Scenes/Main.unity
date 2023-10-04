@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.10068366, g: 0.12507, b: 0.31771865, a: 1}
+  m_IndirectSpecularColor: {r: 0.08029469, g: 0.09969518, b: 0.30112675, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -4664,6 +4664,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 7799841485154738373, guid: ddc796439cb5aef42a475f57b23623b7,
         type: 3}
+    - target: {fileID: 5686303240754677378, guid: 44149e5b31c7bda4ca868e05f258a028,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 44149e5b31c7bda4ca868e05f258a028, type: 3}
 --- !u!1 &604715964
@@ -9766,7 +9771,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1832672702}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0e5726d720f5ef547b54bcdfc747fd0f, type: 3}
   m_Name: 
@@ -9933,6 +9938,61 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1879132136}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1888073686
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1888073687}
+  - component: {fileID: 1888073688}
+  m_Layer: 0
+  m_Name: MushroomSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1888073687
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1888073686}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1903889562}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1888073688
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1888073686}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5858c67fdaa81f4594343dadfaf19af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  path: {fileID: 1732190692}
+  items:
+  - {fileID: 919132149155446097, guid: a91558a0ee8231646945bac9e48e2be1, type: 3}
+  - {fileID: 919132149155446097, guid: f2032797579c5f14a89dfc4b5a0054f1, type: 3}
+  - {fileID: 919132149155446097, guid: 89ac079299618bf4e91677492e74771d, type: 3}
+  - {fileID: 919132149155446097, guid: e03fcd37bb496234da31ad63fbaa8f7d, type: 3}
+  - {fileID: 919132149155446097, guid: f1cc4b3103545644abfcca053acb5cdb, type: 3}
+  - {fileID: 919132149155446097, guid: 2e4c0c0f24405c14eb79569a2c921664, type: 3}
+  - {fileID: 919132149155446097, guid: 6f36b1beaca732a49badac97e35c3a1b, type: 3}
+  - {fileID: 919132149155446097, guid: cbea1d88b4d712249ade1c8b4102de4c, type: 3}
+  - {fileID: 919132149155446097, guid: d49b2b68de74ad7449a9565cebcaf111, type: 3}
 --- !u!1 &1890540702
 GameObject:
   m_ObjectHideFlags: 0
@@ -10127,6 +10187,12 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1895089829}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &1903889562 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 413771791165940775, guid: 44149e5b31c7bda4ca868e05f258a028,
+    type: 3}
+  m_PrefabInstance: {fileID: 580194867}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1914182747
 PrefabInstance:
   m_ObjectHideFlags: 0

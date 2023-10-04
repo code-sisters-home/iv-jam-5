@@ -18,5 +18,18 @@ public class CounterLaps : MonoBehaviour
             GameMaster.Instance.Statistics.GetCollectionItem();
             Destroy(other.gameObject);
         }
+
+        if (other.tag.Equals("sky_item"))
+        {
+            // GameMaster.Instance.Statistics.GetCollectionItem();
+            Debug.Log("SKY ITEM");
+            Destroy(other.gameObject);
+        }
+
+        if (other.tag.Equals("lightning"))
+        {
+            GameMaster.Instance.Statistics.GetDamage();
+            Destroy(other.gameObject);
+        }
     }
 }

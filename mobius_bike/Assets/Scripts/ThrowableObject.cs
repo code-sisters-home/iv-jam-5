@@ -7,7 +7,7 @@ public class ThrowableObject : MonoBehaviour
     public GameObject targetObject;	
 	private float nextTime = 0.0f;
     public float period = 0.09f;
-	public float speed = 10.0f;
+	public float speed = 20.0f;
 	public float lifetime = 20.0f;
 	private Space initSpace;
 	private Transform target;

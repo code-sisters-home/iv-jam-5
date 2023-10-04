@@ -4,9 +4,13 @@ using UnityEngine;
 
 public class FallingObject : MonoBehaviour
 {
+    public CatmullRomSpline path;
 	public float lifetime = 20.0f;
 	public float speed = 0.1f;
 	private float initTime;
+
+    
+
     // Start is called before the first frame update
     void Start()
     {
@@ -16,15 +20,15 @@ public class FallingObject : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {	
-		
-        transform.position += Vector3.down*speed;	
+    {
 
+        if (transform.position.y > path.GetClosestPosition(transform).y)
+            transform.position += Vector3.down * speed;
 
-		//if (Time.time > initTime + lifetime)
+        //if (Time.time > initTime + lifetime)
         //{
         //    Destroy(gameObject);
         //}		
-		
+
     }
 }

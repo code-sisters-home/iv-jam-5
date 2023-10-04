@@ -63,4 +63,10 @@ public class Statistics : MonoBehaviour
             return ((CollectionItemType)result, random.Next(100, 1001));
         }
     }
+
+    public void GetDamage()
+    {
+        Debug.Log("Damage!");
+
+    }
 }

@@ -122,9 +122,10 @@ public class CatmullRomSpline : MonoBehaviour
 		return pos;		
 	}
 
-	public Vector3 GetClosestPosition(Transform obj, ref int closestIndex, ref float t)
+	public Vector3 GetClosestPosition(Transform obj)
 	{
-		closestIndex = 	GetClosestIndex(obj, true);
+		float t = 0;
+		int closestIndex = 	GetClosestIndex(obj, true);
 		Vector3 p0 = controlPointsList[ClampListPos(closestIndex - 2)].position;
 		Vector3 p1 = controlPointsList[ClampListPos(closestIndex - 1)].position;
 		Vector3 p2 = controlPointsList[ClampListPos(closestIndex)].position;

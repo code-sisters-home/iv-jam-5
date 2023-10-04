@@ -24,7 +24,7 @@ public class EmitObjects : MonoBehaviour
 				nextSpawnTime = Time.time + emitPeriod;
 
 				GameObject fallingObject = Instantiate(obj, transform.position, Quaternion.identity) as GameObject;
-				fallingObject.AddComponent<FallingObject>();
+				//fallingObject.AddComponent<FallingObject>();
 				//lightningObject.GetComponent<ThrowableObject>().targetObject = targetObject;
 				
 		}

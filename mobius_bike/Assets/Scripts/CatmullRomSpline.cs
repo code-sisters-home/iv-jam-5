@@ -3,8 +3,22 @@ using System.Collections;
 
 //https://www.habrador.com/tutorials/interpolation/1-catmull-rom-splines/
 //Interpolation between points with a Catmull-Rom spline
+public class PositionAndRotation
+{
+	public PositionAndRotation()
+	{
+		position = new Vector3(0, 0, 0);
+		rotation =  Quaternion.identity;
+		
+	}
+	public Vector3 position {get; set;}
+	public Quaternion rotation {get; set;}
+}	
+
+
 public class CatmullRomSpline : MonoBehaviour
 {
+
 	//Has to be at least 4 points
 	public Transform[] controlPointsList;
 	//Are we making a line or a loop?
@@ -68,6 +82,15 @@ public class CatmullRomSpline : MonoBehaviour
 		}
 	}
 
+	public PositionAndRotation GetPositionAndRotation(float s)
+	{
+		PositionAndRotation positionAndRotation = new PositionAndRotation();		
+		positionAndRotation.position = GetPosition(s);
+		int index = Mathf.FloorToInt(s);
+		positionAndRotation.rotation = Quaternion.Lerp(GetPoint(index).rotation, GetPoint(index+1).rotation, s-index);
+		return positionAndRotation;
+	}
+
 	public Vector3 GetPosition(float s)
 	{
 		int index = Mathf.FloorToInt(s);
@@ -122,10 +145,26 @@ public class CatmullRomSpline : MonoBehaviour
 		return pos;		
 	}
 
+	public PositionAndRotation GetClosestPositionAndRotation(Transform obj)
+	{
+		PositionAndRotation positionAndRotation = new PositionAndRotation();		
+		int index = 0;
+		float t = 0;
+		positionAndRotation.position = GetClosestPosition(obj, ref index, ref t);
+		positionAndRotation.rotation = Quaternion.Lerp(GetPoint(index).rotation, GetPoint(index+1).rotation, t);
+		return positionAndRotation;
+	}
+
 	public Vector3 GetClosestPosition(Transform obj)
 	{
+		int index = 0;
 		float t = 0;
-		int closestIndex = 	GetClosestIndex(obj, true);
+		return GetClosestPosition(obj, ref index, ref t);
+	}
+
+	public Vector3 GetClosestPosition(Transform obj, ref int closestIndex, ref float t)
+	{
+		closestIndex = 	GetClosestIndex(obj, true);
 		Vector3 p0 = controlPointsList[ClampListPos(closestIndex - 2)].position;
 		Vector3 p1 = controlPointsList[ClampListPos(closestIndex - 1)].position;
 		Vector3 p2 = controlPointsList[ClampListPos(closestIndex)].position;

@@ -3039,6 +3039,9 @@ MonoBehaviour:
   speed: 1
   useControls: 0
   speedTurn: 3
+  useForward: 0
+  roadWidth: 5
+  accStep: 0.1
 --- !u!1 &292069819
 GameObject:
   m_ObjectHideFlags: 0
@@ -9764,6 +9767,9 @@ MonoBehaviour:
   speed: 0.1
   useControls: 0
   speedTurn: 3
+  useForward: 0
+  roadWidth: 5
+  accStep: 0.1
 --- !u!114 &1832672705
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12669,8 +12675,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1027561355591841603, guid: 377dd92b11844a443a1f7eab00b017be,
         type: 3}
+      propertyPath: accStep
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1027561355591841603, guid: 377dd92b11844a443a1f7eab00b017be,
+        type: 3}
+      propertyPath: roadWidth
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1027561355591841603, guid: 377dd92b11844a443a1f7eab00b017be,
+        type: 3}
       propertyPath: speedTurn
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1027561355591841603, guid: 377dd92b11844a443a1f7eab00b017be,
+        type: 3}
+      propertyPath: useForward
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1027561355591841603, guid: 377dd92b11844a443a1f7eab00b017be,
         type: 3}

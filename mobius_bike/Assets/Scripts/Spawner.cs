@@ -30,8 +30,8 @@ public class Spawner : MonoBehaviour
 		
 		int i = Random.Range(0, items.Length);
         var item = Instantiate(items[i], pr.position, pr.rotation, transform);
-
-		Vector3 lr = new Vector3(Random.Range(0.0f, 2.0f)-1, 0, 0)*roadWidth;
+		float shift = Random.Range(-1.0f, 1.0f)*roadWidth;
+		Vector3 lr = new Vector3(shift, 0, 0);
 		item.transform.position += item.transform.TransformDirection(lr);
 
 		float scale = 2;

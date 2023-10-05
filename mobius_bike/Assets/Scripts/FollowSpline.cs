@@ -9,12 +9,16 @@ public class FollowSpline : MonoBehaviour
     public CatmullRomSpline path;
     public float speed = 3f;
 	public bool useControls = false;
-	public float speedTurn = 3f;
+	public float speedTurn = 3f;	
+	
+	public bool useForward = false;
+	
+	public float roadWidth = 5f;
+	public float accStep = 0.1f;
 
-	bool isLeft = false;
-	bool isRight = false;
-
-	Vector3 vecTurn = Vector3.zero;
+	float shift = 0;
+	float dist = 0;
+	float acc = 0;
 	//private IEnumerator<Transform> pointInPath;
 
 	void OnDrawGizmos()
@@ -40,25 +44,33 @@ public class FollowSpline : MonoBehaviour
 
     void Update()
     {
-
-		//Vector3 pos = path.GetPosition(transform, ref index, ref t);
-		//transform.LookAt(pos);
-
+	
+		bool isForward = Input.GetKey(KeyCode.W) && useControls;
+		bool isBackward = Input.GetKey(KeyCode.S) && useControls;
+		bool isLeft = Input.GetKey(KeyCode.A) && useControls;
+		bool isRight = Input.GetKey(KeyCode.D) && useControls;
 		
-		isLeft = Input.GetKey(KeyCode.A) && useControls;
-		isRight = Input.GetKey(KeyCode.D) && useControls;
-		if (Input.GetKey(KeyCode.A))
-			vecTurn = transform.TransformDirection(Vector3.left);
-		else if (Input.GetKey(KeyCode.D))
-			vecTurn = transform.TransformDirection(Vector3.right);
+		if(isLeft)
+			shift -= Time.deltaTime*speedTurn;
+		else if(isRight)
+			shift += Time.deltaTime*speedTurn;
+		shift = Mathf.Clamp(shift, -1f, 1f);
+		Vector3 vecTurn = transform.TransformDirection(shift * roadWidth * Vector3.right);
+		
+		if(useForward)
+		{
+			if(isForward)
+				acc = Mathf.Clamp(acc + accStep, 0f, 1.0f);
+			else if(isBackward)
+				acc = Mathf.Clamp(acc - accStep, 0f, 1.0f);
+			dist += acc * Time.deltaTime * speed;
+		}
 		else
-			vecTurn = Vector3.zero;
-
-		//transform.position += transform.TransformDirection(Vector3.forward).normalized * Time.deltaTime * speed;
-		float s = Time.timeSinceLevelLoad * speed;
-		transform.position = path.GetPosition(s) + vecTurn * speedTurn;
-		int index = Mathf.FloorToInt(s);
-		transform.rotation = Quaternion.Lerp(path.GetPoint(index).rotation, path.GetPoint(index+1).rotation, s-index);
+			dist = Time.timeSinceLevelLoad * speed;
+		
+		PositionAndRotation pr = path.GetPositionAndRotation(dist); 
+		transform.position = pr.position + vecTurn;
+		transform.rotation = pr.rotation;
 
 	}
 

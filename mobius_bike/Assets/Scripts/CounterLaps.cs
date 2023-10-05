@@ -5,7 +5,16 @@ using UnityEngine;
 public class CounterLaps : MonoBehaviour
 {
     public Collider point;
+    public AudioClip mushroomAudioClip;
+    public AudioClip boxAudioClip;
+    public AudioClip lightningAudioClip;
 
+    private AudioSource audioSource;
+
+    private void Start()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
     private void OnTriggerEnter(Collider other)
     {
         if (point == null)
@@ -16,6 +25,10 @@ public class CounterLaps : MonoBehaviour
         if (other.tag.Equals("drop"))
         {
             GameMaster.Instance.Statistics.GetCollectionItem();
+
+            audioSource.clip = mushroomAudioClip;
+            audioSource.Play();
+
             Destroy(other.gameObject);
         }
 
@@ -23,6 +36,10 @@ public class CounterLaps : MonoBehaviour
         {
             // GameMaster.Instance.Statistics.GetCollectionItem();
             Debug.Log("SKY ITEM");
+
+            audioSource.clip = mushroomAudioClip;
+            audioSource.Play();
+
             Destroy(other.gameObject);
         }
 
@@ -30,6 +47,9 @@ public class CounterLaps : MonoBehaviour
         {
             GameMaster.Instance.Statistics.GetDamage();
             Destroy(other.gameObject);
+
+            audioSource.clip = lightningAudioClip;
+            audioSource.Play();
         }
     }
 }

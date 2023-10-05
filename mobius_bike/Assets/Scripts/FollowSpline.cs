@@ -16,12 +16,16 @@ public class FollowSpline : MonoBehaviour
 	public float roadWidth = 5f;
 	public float accStep = 0.01f;
 
+	public AudioClip laenAudioClip;
+
 	float shift = 0;
 	float dist = 0;
 	float acc = 0;
 	float rot = 0;
 	float sign = 1;
-	
+
+	private AudioSource audioSource;
+
 	void OnDrawGizmos()
 	{
 		Gizmos.color = Color.yellow;
@@ -36,7 +40,9 @@ public class FollowSpline : MonoBehaviour
 		Vector3 pos = path.GetPosition(0);
 
         transform.position = pos;
-    }
+
+		audioSource = GetComponent<AudioSource>();
+	}
 
     void Update()
     {
@@ -50,11 +56,17 @@ public class FollowSpline : MonoBehaviour
 		{
 			shift -= Time.deltaTime*speedTurn;
 			rot += Time.deltaTime*speedTurn;
+
+			audioSource.clip = laenAudioClip;
+			audioSource.Play();
 		}
 		else if(isRight)
 		{
 			shift += Time.deltaTime*speedTurn;
 			rot -= Time.deltaTime*speedTurn;
+
+			audioSource.clip = laenAudioClip;
+			audioSource.Play();
 		}
 		else if(Mathf.Abs(rot - Mathf.Sign(rot)*Time.deltaTime ) < Mathf.Abs(rot))
 		{

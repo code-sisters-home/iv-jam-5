@@ -11,6 +11,7 @@ public class Thunder : MonoBehaviour
     public float lightningPeriod = 2f;
 	public float evilnessPeriod = 20f;
 	public float evilnessTime = 5f;
+	private bool isSFXPlay = false;
 
     // Start is called before the first frame update
     void Start()
@@ -26,7 +27,11 @@ public class Thunder : MonoBehaviour
 			float evilness = 1 - Mathf.Pow(((Time.time - nextEvilnessTime)/evilnessTime - 0.5f)*2.0f, 6.0f);
 			float k = Mathf.Lerp(1.0f, 0.3f, evilness);
 			GetComponentInChildren<Renderer>().material.SetColor("_BaseColor", new Color(k, k, k, 1));
-			
+			if (!isSFXPlay)
+			{
+				GetComponent<AudioSource>().Play();
+				isSFXPlay = true;
+			}
 			if (Time.time > nextSpawnTime)
 			{
 				nextSpawnTime = Time.time + lightningPeriod;
@@ -41,6 +46,7 @@ public class Thunder : MonoBehaviour
 		{
 			GetComponentInChildren<Renderer>().material.SetColor("_BaseColor", new Color(1, 1, 1, 1));
 			nextEvilnessTime = Time.time + evilnessPeriod;
+			isSFXPlay = false;
 		}
     }
 }

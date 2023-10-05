@@ -39,9 +39,8 @@ public class Spawner : MonoBehaviour
 		
 		item.tag = tag;
 		SphereCollider sc = item.AddComponent<SphereCollider>();
-		sc.isTrigger = true;	
-		
-    }
+		sc.isTrigger = true;
+	}
 
     float timer = 0.0f;
     private void Update()

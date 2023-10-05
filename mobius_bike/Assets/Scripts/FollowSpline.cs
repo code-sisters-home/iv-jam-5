@@ -10,6 +10,7 @@ public class FollowSpline : MonoBehaviour
     public float speed = 3f;
 	public bool useControls = false;
 	public float speedTurn = 3f;	
+	public float start = 0;
 	
 	public bool useForward = false;
 	
@@ -42,7 +43,9 @@ public class FollowSpline : MonoBehaviour
         transform.position = pos;
 
 		audioSource = GetComponent<AudioSource>();
-	}
+
+		dist = start;
+    }
 
     void Update()
     {
@@ -84,7 +87,7 @@ public class FollowSpline : MonoBehaviour
 			dist += acc * Time.deltaTime * speed;
 		}
 		else
-			dist = Time.timeSinceLevelLoad * speed;
+			dist = start + Time.timeSinceLevelLoad * speed;
 		
 		PositionAndRotation pr = path.GetPositionAndRotation(dist); 
 		transform.rotation = pr.rotation;

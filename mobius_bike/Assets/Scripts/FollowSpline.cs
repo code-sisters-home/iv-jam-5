@@ -19,7 +19,9 @@ public class FollowSpline : MonoBehaviour
 	float shift = 0;
 	float dist = 0;
 	float acc = 0;
-
+	float rot = 0;
+	float sign = 1;
+	
 	void OnDrawGizmos()
 	{
 		Gizmos.color = Color.yellow;
@@ -45,11 +47,21 @@ public class FollowSpline : MonoBehaviour
 		bool isRight = Input.GetKey(KeyCode.D) && useControls;
 		
 		if(isLeft)
+		{
 			shift -= Time.deltaTime*speedTurn;
+			rot += Time.deltaTime*speedTurn;
+		}
 		else if(isRight)
+		{
 			shift += Time.deltaTime*speedTurn;
+			rot -= Time.deltaTime*speedTurn;
+		}
+		else if(Mathf.Abs(rot - Mathf.Sign(rot)*Time.deltaTime ) < Mathf.Abs(rot))
+		{
+			rot -= Mathf.Sign(rot)*Time.deltaTime;
+		}
 		shift = Mathf.Clamp(shift, -1f, 1f);
-		Vector3 vecTurn = transform.TransformDirection(shift * roadWidth * Vector3.right);
+		rot = Mathf.Clamp(rot, -1f, 1f);
 		
 		if(useForward)
 		{
@@ -63,9 +75,11 @@ public class FollowSpline : MonoBehaviour
 			dist = Time.timeSinceLevelLoad * speed;
 		
 		PositionAndRotation pr = path.GetPositionAndRotation(dist); 
-		transform.position = pr.position + vecTurn;
 		transform.rotation = pr.rotation;
-
+		
+		Vector3 vecTurn = transform.TransformDirection(shift * roadWidth * Vector3.right);
+		transform.position = pr.position + vecTurn;		
+		transform.Rotate(0.0f, 0.0f, rot*45.0f, Space.Self);
 	}
 
 }

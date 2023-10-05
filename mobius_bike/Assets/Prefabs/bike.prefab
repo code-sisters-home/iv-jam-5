@@ -55,6 +55,7 @@ MonoBehaviour:
   speed: 2
   useControls: 1
   speedTurn: 3
+  start: 15
   useForward: 1
   roadWidth: 5
   accStep: 0.01

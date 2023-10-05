@@ -37,7 +37,7 @@ public class CounterLaps : MonoBehaviour
             // GameMaster.Instance.Statistics.GetCollectionItem();
             Debug.Log("SKY ITEM");
 
-            audioSource.clip = mushroomAudioClip;
+            audioSource.clip = boxAudioClip;
             audioSource.Play();
 
             Destroy(other.gameObject);

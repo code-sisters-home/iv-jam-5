@@ -1181,6 +1181,7 @@ MonoBehaviour:
   speed: 1
   useControls: 0
   speedTurn: 3
+  start: 0
   useForward: 0
   roadWidth: 5
   accStep: 0.1
@@ -8000,6 +8001,7 @@ MonoBehaviour:
   speed: 0.1
   useControls: 0
   speedTurn: 3
+  start: 0
   useForward: 0
   roadWidth: 5
   accStep: 0.1
@@ -9643,6 +9645,41 @@ PrefabInstance:
       propertyPath: path
       value: 
       objectReference: {fileID: 1732190692}
+    - target: {fileID: 6825087384119974984, guid: 13db890127f58b549aa37926b58299f1,
+        type: 3}
+      propertyPath: start
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 6825087385269720856, guid: 13db890127f58b549aa37926b58299f1,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.13999987
+      objectReference: {fileID: 0}
+    - target: {fileID: 6825087385269720856, guid: 13db890127f58b549aa37926b58299f1,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9776591
+      objectReference: {fileID: 0}
+    - target: {fileID: 6825087385269720856, guid: 13db890127f58b549aa37926b58299f1,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.21019672
+      objectReference: {fileID: 0}
+    - target: {fileID: 6825087385269720856, guid: 13db890127f58b549aa37926b58299f1,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.000000028516881
+      objectReference: {fileID: 0}
+    - target: {fileID: 6825087385269720856, guid: 13db890127f58b549aa37926b58299f1,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.000000017233994
+      objectReference: {fileID: 0}
+    - target: {fileID: 6825087385269720856, guid: 13db890127f58b549aa37926b58299f1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 24.268
+      objectReference: {fileID: 0}
     - target: {fileID: 6825087385269720859, guid: 13db890127f58b549aa37926b58299f1,
         type: 3}
       propertyPath: m_Cameras.Array.data[0]

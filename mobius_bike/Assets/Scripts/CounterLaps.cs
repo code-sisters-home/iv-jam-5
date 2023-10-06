@@ -24,9 +24,14 @@ public class CounterLaps : MonoBehaviour
 
         if (other.tag.Equals("drop"))
         {
-            GameMaster.Instance.Statistics.GetCollectionItem();
-
-            audioSource.clip = mushroomAudioClip;
+            var mushroom = other.gameObject.GetComponent<Mushroom>();
+            if(mushroom != null)
+            {
+                GameMaster.Instance.Statistics.GetMushroom(mushroom);
+                audioSource.clip = mushroomAudioClip;
+            }
+            //else GetComponent<Box> or what?
+                       
             audioSource.Play();
 
             Destroy(other.gameObject);

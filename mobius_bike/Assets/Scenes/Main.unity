@@ -11740,6 +11740,46 @@ PrefabInstance:
       propertyPath: m_Cameras.Array.data[0]
       value: 
       objectReference: {fileID: 1508027551}
+    - target: {fileID: 4174560035327210319, guid: 13db890127f58b549aa37926b58299f1,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6494442818754277091, guid: 13db890127f58b549aa37926b58299f1,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.06
+      objectReference: {fileID: 0}
+    - target: {fileID: 6494442818754277091, guid: 13db890127f58b549aa37926b58299f1,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.801
+      objectReference: {fileID: 0}
+    - target: {fileID: 6494442818754277091, guid: 13db890127f58b549aa37926b58299f1,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.989
+      objectReference: {fileID: 0}
+    - target: {fileID: 6494442818754277091, guid: 13db890127f58b549aa37926b58299f1,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6494442818754277091, guid: 13db890127f58b549aa37926b58299f1,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.99941164
+      objectReference: {fileID: 0}
+    - target: {fileID: 6494442818754277091, guid: 13db890127f58b549aa37926b58299f1,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.03429868
+      objectReference: {fileID: 0}
+    - target: {fileID: 6494442818754277091, guid: 13db890127f58b549aa37926b58299f1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -3.931
+      objectReference: {fileID: 0}
     - target: {fileID: 6964021678731885373, guid: 13db890127f58b549aa37926b58299f1,
         type: 3}
       propertyPath: point
@@ -11810,6 +11850,11 @@ PrefabInstance:
       propertyPath: path
       value: 
       objectReference: {fileID: 1732190692}
+    - target: {fileID: 7521127074816253297, guid: 13db890127f58b549aa37926b58299f1,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 13db890127f58b549aa37926b58299f1, type: 3}
 --- !u!1001 &8005098332577157856

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.10068366, g: 0.12507, b: 0.31771865, a: 1}
+  m_IndirectSpecularColor: {r: 0.10074612, g: 0.12511952, b: 0.31779543, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1778,10 +1778,10 @@ RectTransform:
   m_Father: {fileID: 1313087838}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 99.21069, y: -20.435}
+  m_SizeDelta: {x: 198.42139, y: 40.87}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &428287863
 MonoBehaviour:
@@ -5714,7 +5714,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1313087838
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8226,15 +8226,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   path: {fileID: 1732190692}
   items:
-  - {fileID: 919132149155446097, guid: a91558a0ee8231646945bac9e48e2be1, type: 3}
-  - {fileID: 919132149155446097, guid: f2032797579c5f14a89dfc4b5a0054f1, type: 3}
-  - {fileID: 919132149155446097, guid: 89ac079299618bf4e91677492e74771d, type: 3}
-  - {fileID: 919132149155446097, guid: e03fcd37bb496234da31ad63fbaa8f7d, type: 3}
-  - {fileID: 919132149155446097, guid: f1cc4b3103545644abfcca053acb5cdb, type: 3}
-  - {fileID: 919132149155446097, guid: 2e4c0c0f24405c14eb79569a2c921664, type: 3}
-  - {fileID: 919132149155446097, guid: 6f36b1beaca732a49badac97e35c3a1b, type: 3}
-  - {fileID: 919132149155446097, guid: cbea1d88b4d712249ade1c8b4102de4c, type: 3}
-  - {fileID: 919132149155446097, guid: d49b2b68de74ad7449a9565cebcaf111, type: 3}
+  - {fileID: 1602767070466665931, guid: 0d957f690c9a87c4e8fe7ccc259ca417, type: 3}
+  - {fileID: 7159254495154427299, guid: de9cc0ebd79cef147bdad58e39417027, type: 3}
+  - {fileID: 5102647351682970447, guid: bcb5a5d75d93d8644ae4991a88e49672, type: 3}
+  - {fileID: 5494610252524586692, guid: e70c3bf9a129d3b47b63a540d08edaf0, type: 3}
+  - {fileID: 6682099797819984323, guid: d178ae39d6389d94e80e7c4b106582ac, type: 3}
+  - {fileID: 6667007137072608869, guid: 0c12f8e34ece9b34ca0c8c21952e7be5, type: 3}
+  - {fileID: 3067173238502017832, guid: a3aec8b33768a6644b74c2ed22b9332a, type: 3}
+  - {fileID: 1510981059840399225, guid: cf94cdad8a3e0e84f9157363bee9f3d3, type: 3}
+  - {fileID: 5076953115960337936, guid: ac9129c16702ef04aba90cd1375c2bd2, type: 3}
   dropPeriod: 2
   tag: drop
   roadWidth: 5
@@ -8550,10 +8550,10 @@ RectTransform:
   m_Father: {fileID: 1313087838}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 99.21069, y: -90.869995}
+  m_SizeDelta: {x: 198.42139, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1918840134
 MonoBehaviour:
@@ -9079,7 +9079,7 @@ MonoBehaviour:
   m_ChildAlignment: 0
   m_StartCorner: 0
   m_StartAxis: 0
-  m_CellSize: {x: 200, y: 300}
+  m_CellSize: {x: 300, y: 300}
   m_Spacing: {x: 30, y: 30}
   m_Constraint: 0
   m_ConstraintCount: 2

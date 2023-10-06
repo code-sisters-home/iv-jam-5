@@ -8,4 +8,84 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Main.unity
     guid: 399b15e28feb30648b9b4696a2969e16
+  - enabled: 1
+    path: Assets/GamePush/Examples/Demo/Assets/Examples/Modules/Achievements/Achievements
+      Scene.unity
+    guid: 476d03e928316594d96c800c233f44da
+  - enabled: 1
+    path: Assets/GamePush/Examples/Demo/Assets/Examples/Modules/Ads/Ads Scene.unity
+    guid: a1d7c91ff83d9ed4c85bc6360be9da88
+  - enabled: 1
+    path: Assets/GamePush/Examples/Demo/Assets/Examples/Modules/Channels/Channels
+      Scene.unity
+    guid: 6f7f70dd8cdc4e04e8c928dfa6775b4c
+  - enabled: 1
+    path: Assets/Understone/Free Bike Pack/Scenes/Demo.unity
+    guid: 73cdac320453c2144adbf2ef25bc787d
+  - enabled: 1
+    path: Assets/Understone/Free Aircraft Pack/Scenes/Demo.unity
+    guid: 72ca2c5f862263d41ab391046a108900
+  - enabled: 1
+    path: Assets/BOXOPHOBIC/Skybox Cubemap Extended/Demo/Demo Blend.unity
+    guid: a66e5f1bb7e0e90469c3bcd8ae5c4b2d
+  - enabled: 1
+    path: Assets/BOXOPHOBIC/Skybox Cubemap Extended/Demo/Demo Day.unity
+    guid: 67adac43bcf286444be612074ab04f75
+  - enabled: 1
+    path: Assets/BOXOPHOBIC/Skybox Cubemap Extended/Demo/Demo Night.unity
+    guid: a5df9867bdacd604dbe1d73079151448
+  - enabled: 1
+    path: Assets/GamePush/Examples/Demo/Assets/Examples/Modules/Documents/Documents
+      Scene.unity
+    guid: 1250197448fa0054cb481dc1b3bb0e4f
+  - enabled: 1
+    path: Assets/GamePush/Examples/Demo/Assets/Examples/Modules/Files/Files Scene.unity
+    guid: b29762bbb17708345b2ae605a4922fae
+  - enabled: 1
+    path: Assets/GamePush/Examples/Demo/Assets/Examples/Modules/GamesCollections/Games
+      Collections Scene.unity
+    guid: 429a0b96022c6a24f91370d7da36c9af
+  - enabled: 1
+    path: Assets/Simasart/Hungry Bat/Demos/HungryBat_CompletePopup.unity
+    guid: 80a28e52e826c074584f365f1be195cc
+  - enabled: 1
+    path: Assets/Simasart/Hungry Bat/Demos/HungryBat_Gameplay.unity
+    guid: 2548db127a569c3489d6bb8886329a1f
+  - enabled: 1
+    path: Assets/Simasart/Hungry Bat/Demos/HungryBat_PausePopup.unity
+    guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/GamePush/Examples/Demo/Assets/Examples/Modules/Leaderboard/Leaderboard
+      Scene.unity
+    guid: b700a5c5fdb0a0b48a3aa169b562b9f9
+  - enabled: 1
+    path: Assets/GamePush/Examples/Demo/Assets/Examples/Modules/LeaderboardScoped/Leaderboard
+      Scoped Scene.unity
+    guid: 41a477ce8dbf582469a26574c7ffcdb5
+  - enabled: 1
+    path: Assets/GamePush/Examples/Demo/Assets/Examples/Main Menu.unity
+    guid: 2f1f74b392018a645acd08e42b82cb86
+  - enabled: 1
+    path: Assets/GamePush/Examples/Demo/Assets/Examples/Modules/Payments/Payments
+      Scene.unity
+    guid: 9ee26786f78112e4e97d6d685d5765e2
+  - enabled: 1
+    path: Assets/GamePush/Examples/Demo/Assets/Examples/Modules/Player/Player Scene.unity
+    guid: ec20dac07e3ceb3498494d83be49a29f
+  - enabled: 1
+    path: Assets/GamePush/Examples/Demo/Assets/Examples/Modules/Players/Players Scene.unity
+    guid: ccf56ab192b4570439d87a50ec1cb2cd
+  - enabled: 1
+    path: Assets/Scenes/SampleScene.unity
+    guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 1
+    path: Assets/GamePush/Examples/Demo/Assets/Examples/Modules/Socials/Socials Scene.unity
+    guid: 36c49524ddeeaa044947f9fe08b84175
+  - enabled: 1
+    path: Assets/Scenes/UI.unity
+    guid: 9ca3dffe5e947264c96db1d3f3d296bc
+  - enabled: 1
+    path: Assets/GamePush/Examples/Demo/Assets/Examples/Modules/Variables/Variables
+      Scene.unity
+    guid: 076a15aac81be5e4d89215d472b6cea2
   m_configObjects: {}

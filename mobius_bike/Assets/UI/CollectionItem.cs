@@ -18,7 +18,7 @@ public class CollectionItem : MonoBehaviour
         _data = data;
         _name.SetText(data.Text);
         _price.SetText("{0}", data.Price);
-        _icon.sprite = GameMaster.Instance.SpriteAtlas.GetSprite(data.Text);
+        _icon.sprite = GameMaster.Instance.SpriteAtlas.GetSprite(data.IconName);
     }
 }
 

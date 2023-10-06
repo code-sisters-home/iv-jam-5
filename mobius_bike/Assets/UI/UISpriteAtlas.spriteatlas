@@ -34,6 +34,7 @@ SpriteAtlas:
     packables:
     - {fileID: 102900000, guid: 2548aa685f608aa4ba647e74a9149480, type: 3}
     - {fileID: 102900000, guid: 44d9e602fa6308f4ca47e2290c470cbd, type: 3}
+    - {fileID: 102900000, guid: b3fb7897cfe1be244bfaa34860f763e2, type: 3}
     bindAsDefault: 1
     isAtlasV2: 0
     cachedData: {fileID: 0}
@@ -58,6 +59,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 4ea348433890b4f439183c9c11524ad6, type: 3}
   - {fileID: 21300000, guid: f9be64734e15cdb4ca3c4ca94c4e05a8, type: 3}
   - {fileID: 21300000, guid: 8793bb93e7b561146a1c64282dec2f0e, type: 3}
+  - {fileID: 21300000, guid: 7c4b19a378c984243989f04e347e4e07, type: 3}
   - {fileID: 21300000, guid: 720936d3887635548b5eca76a7978798, type: 3}
   - {fileID: 21300000, guid: 1157b8e349a8ffe4c88f133ce0c28a5b, type: 3}
   - {fileID: 21300000, guid: 23c39604c54f9f944ac7791b186f3dce, type: 3}
@@ -66,15 +68,20 @@ SpriteAtlas:
   - {fileID: 21300000, guid: c8a9c674838776147b01b49761e36724, type: 3}
   - {fileID: 21300000, guid: 7ba56b9463eeee245a06f9ae290406d3, type: 3}
   - {fileID: 21300000, guid: 76caf5e4ca559764484493b1342b0952, type: 3}
+  - {fileID: 21300000, guid: 874576f47f15b6a43ac6aea102c4c6a9, type: 3}
   - {fileID: 21300000, guid: c2e882058c776c244adf87fa24d5282f, type: 3}
   - {fileID: 21300000, guid: dea399e55d8c7a54b840b364def11fed, type: 3}
+  - {fileID: 21300000, guid: 13664fe5900d0da4094b2e13221f9438, type: 3}
   - {fileID: 21300000, guid: 5db29c36ee7e6ff449713292d4e7c5a5, type: 3}
   - {fileID: 21300000, guid: e7d9554654e4add46b9a20e0caa846a5, type: 3}
+  - {fileID: 21300000, guid: 6c9821960c0a61945937caad3d012b2d, type: 3}
+  - {fileID: 21300000, guid: 1e2e71b64538488488afd91d6db3bdc1, type: 3}
   - {fileID: 21300000, guid: 686161071ef7775448055f798bea6d70, type: 3}
   - {fileID: 21300000, guid: dfbb129704899bf42bf9d84606ec9881, type: 3}
   - {fileID: 21300000, guid: 3dd234a76f40ce24fa2645f79e88f453, type: 3}
   - {fileID: 21300000, guid: 3df3c7a773f95f5429f29f0c38bee4a1, type: 3}
   - {fileID: 21300000, guid: f4ded2b71ce341f4aa2abcdef4c7a8d9, type: 3}
+  - {fileID: 21300000, guid: 82df34b7a9c52ad49980a86550a52172, type: 3}
   - {fileID: 21300000, guid: fc9d7ac77b80e424d9c6d2890f9af52b, type: 3}
   - {fileID: 21300000, guid: 73a420e79dbc06348b3301a2dd844a44, type: 3}
   - {fileID: 21300000, guid: 36213be7768037e44898d0e8dbee419b, type: 3}
@@ -99,16 +106,18 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 5aabaadcd5e8dce4296119d032114c28, type: 3}
   - {fileID: 21300000, guid: fb725fdc0eaecbc4ba5e791c7eec9107, type: 3}
   - {fileID: 21300000, guid: 78c9ee4deb6ba8444981dd45dab7a228, type: 3}
-  - {fileID: 21300000, guid: 5a7e277dfcab1b94ca994394bce8a844, type: 3}
   - {fileID: 21300000, guid: c236248d657bd784092925b93f1f81d1, type: 3}
   - {fileID: 21300000, guid: adaac68d8e5d693499597113889d11d3, type: 3}
   - {fileID: 21300000, guid: 9185becda6d2b6b478b10cafa972387a, type: 3}
   - {fileID: 21300000, guid: 720ac4fdbef3a144cb48fa9a4e18f746, type: 3}
   - {fileID: 21300000, guid: ae4dca1e991202d4dae4865a983b7622, type: 3}
   - {fileID: 21300000, guid: eca1954e3092f6c468c69c10d19a6413, type: 3}
+  - {fileID: 21300000, guid: 5b4e6d7ee5beec540b6e37b62e37a146, type: 3}
   - {fileID: 21300000, guid: 01a34d9e0dade794188a273832564fb0, type: 3}
   - {fileID: 21300000, guid: 13335ddeab3f9f143a12454e43ab6fe6, type: 3}
+  - {fileID: 21300000, guid: 95bde7fec1d80b548810ecd4500e7408, type: 3}
   - {fileID: 21300000, guid: 140169fe467b8b649aa2541e0c8d6c09, type: 3}
+  - {fileID: 21300000, guid: da71c27f255429d4ba0c1e2ea5c3222d, type: 3}
   - {fileID: 21300000, guid: 5b0c287fddf11b24d910a6b285ee1807, type: 3}
   - {fileID: 21300000, guid: 7b0d029f1d2a164488ab0a51a21ca796, type: 3}
   - {fileID: 21300000, guid: a3866ddfe38760f428380c175dedad4c, type: 3}
@@ -133,6 +142,7 @@ SpriteAtlas:
   - speech_bubble_bg
   - icon_music
   - button_shine
+  - 5_orange
   - UI_Icon_Potion_1
   - box_blue
   - blueberry
@@ -141,15 +151,20 @@ SpriteAtlas:
   - tittle_box
   - toggle_bg
   - UI_Icon_Meat_2
+  - 7_yellow
   - UI_Icon_Potion_4
   - bg_Trees
+  - 1_brown_cap
   - bar_mask
   - star_slot
+  - 2_cep
+  - 4_oily
   - UI_Icon_Journal
   - box_win_bg
   - powerUp_Button_glow
   - UI_Icon_Meat_1
   - button_yellow_idle
+  - 6_saffron
   - UI_Icon_Coin
   - powerUp_Button_number_bg
   - UI_Icon_Berry
@@ -174,16 +189,18 @@ SpriteAtlas:
   - UI_Icon_Potion_3
   - move_banner
   - round_button_press
-  - hungrybat_logo
   - button_purple_light_idle
   - UI_Icon_Apple
   - button_purple_pressed
   - UI_Icon_Fish
   - icon_replay
   - UI_Icon_Potion_2
+  - 9_umbrella
   - icon_lightning
   - hungrybats_icon
+  - 3_moss
   - strawberry
+  - 8_amanita
   - orange
   - score_bar
   - icon_pause

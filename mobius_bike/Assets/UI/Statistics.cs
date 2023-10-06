@@ -26,8 +26,6 @@ public class Statistics : MonoBehaviour
                 maxAmount: laps,
                 reward: laps * 10));
         }
-
-        GetCollectionItem();
     }
 
     public void IncreaseLaps()
@@ -44,6 +42,17 @@ public class Statistics : MonoBehaviour
         achievementDatas.Remove(data);
         OnAchievementsChanged();
         OnStatsChanged();
+    }
+
+    public void GetMushroom(Mushroom mushroom)
+    {
+        var isEdible = mushroom.IsEdible ? "—ъедобный" : "ядовитый";
+        collectionDatas.Add(new CollectionItemData(
+            text: Mushroom.Name(mushroom.Type)+"\n"+ isEdible,
+            iconName: mushroom.Sprite.name,
+            price: Mushroom.Price(mushroom.Type)
+            ));
+        OnCollectionChanged();
     }
 
     public void GetCollectionItem()

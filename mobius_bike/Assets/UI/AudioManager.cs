@@ -28,16 +28,23 @@ public class AudioManager : MonoBehaviour
 
     public void PlaySound(SoundEvents soundEvent)
     {
-        //Debug.Log($"Play sound: {soundEvent}");
         _sounds.clip = _clips[soundEvent];
         _sounds.Play();
     }
     
     public void PlayMusic(SoundEvents soundEvent)
     {
-        //Debug.Log($"Play music: {soundEvent}");
         _music.clip = _clips[soundEvent];
+        if (soundEvent == SoundEvents.gameplay_background)
+            _music.volume = 0.1f;
+        if (soundEvent == SoundEvents.menu_background)
+            _music.volume = 0.5f;
         _music.Play();
+    }
+
+    public void MuteSounds()
+    {
+        _sounds.Stop();
     }
 }
 

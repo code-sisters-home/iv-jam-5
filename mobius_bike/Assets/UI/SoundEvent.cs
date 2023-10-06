@@ -9,6 +9,6 @@ public class SoundEvent : MonoBehaviour, IPointerDownHandler
 
     public void OnPointerDown(PointerEventData eventData)
     {
-        GameMaster.Instance.AudioManager.PlaySound(_soundEvent);
+        UIMaster.Instance.AudioManager.PlaySound(_soundEvent);
     }
 }

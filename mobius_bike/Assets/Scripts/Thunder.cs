@@ -13,16 +13,15 @@ public class Thunder : MonoBehaviour
 	public float evilnessTime = 5f;
 	private bool isSFXPlay = false;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
     void Update()
     {
-		if(Time.time > nextEvilnessTime && Time.time < nextEvilnessTime + evilnessTime)
+		if (UIMaster.Instance.IsMenu)
+		{
+			GetComponent<AudioSource>().Stop();
+			return;
+		}
+
+		if (Time.time > nextEvilnessTime && Time.time < nextEvilnessTime + evilnessTime)
 		{
 			float evilness = 1 - Mathf.Pow(((Time.time - nextEvilnessTime)/evilnessTime - 0.5f)*2.0f, 6.0f);
 			float k = Mathf.Lerp(1.0f, 0.3f, evilness);

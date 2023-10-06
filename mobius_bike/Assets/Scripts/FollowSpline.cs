@@ -49,7 +49,9 @@ public class FollowSpline : MonoBehaviour
 
     void Update()
     {
-	
+		if (UIMaster.Instance.IsMenu)
+			return;
+
 		bool isForward = Input.GetKey(KeyCode.W) && useControls;
 		bool isBackward = Input.GetKey(KeyCode.S) && useControls;
 		bool isLeft = Input.GetKey(KeyCode.A) && useControls;

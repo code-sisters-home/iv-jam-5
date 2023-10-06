@@ -45,7 +45,10 @@ public class Spawner : MonoBehaviour
     float timer = 0.0f;
     private void Update()
     {
-        timer += Time.deltaTime;
+		if (UIMaster.Instance.IsMenu)
+			return;
+		
+		timer += Time.deltaTime;
         if (timer >= dropPeriod)
         {
             DropSomething();

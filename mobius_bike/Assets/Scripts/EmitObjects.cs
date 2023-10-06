@@ -10,16 +10,12 @@ public class EmitObjects : MonoBehaviour
 	private float nextEvilnessTime = 0.0f;
     public float emitPeriod = 2f;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
     void Update()
     {
-		if (Time.time > nextSpawnTime)
+        if (UIMaster.Instance.IsMenu)
+            return;
+        
+        if (Time.time > nextSpawnTime)
 		{
 				nextSpawnTime = Time.time + emitPeriod;
 

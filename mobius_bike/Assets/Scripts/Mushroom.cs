@@ -1,4 +1,4 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -10,56 +10,36 @@ public class Mushroom : MonoBehaviour
 
     public static string Name(MushroomType type)
     {
-        switch (type)
+        return type switch
         {
-            case MushroomType.brown_cap_boletus:
-                return "Ïîäáåðåçîâèê";
-            case MushroomType.cep:
-                return "Áîðîâèê";
-            case MushroomType.moss_fly_mushroom:
-                return "Ìîõîâèê";
-            case MushroomType.oily_mushroom:
-                return "Ìàñë¸íîê";
-            case MushroomType.orange_cap_boletus:
-                return "Ïîäîñèíîâèê";
-            case MushroomType.saffron_milk_cap:
-                return "Ðûæèê";
-            case MushroomType.yellow_mushroom:
-                return "Ëèñè÷êà";
-            case MushroomType.amanita:
-                return "Ìóõîìîð";
-            case MushroomType.umbrella_mushroom:
-                return "Áëåäíàÿ ïîãàíêà";
-            default:
-                return "Íå ãðèá";
-        }
+            MushroomType.brown_cap_boletus => "ÐŸÐ¾Ð´Ð±ÐµÑ€ÐµÐ·Ð¾Ð²Ð¸Ðº",
+            MushroomType.cep => "Ð‘Ð¾Ñ€Ð¾Ð²Ð¸Ðº",
+            MushroomType.moss_fly_mushroom => "ÐœÐ¾Ñ…Ð¾Ð²Ð¸Ðº",
+            MushroomType.oily_mushroom => "ÐœÐ°ÑÐ»Ñ‘Ð½Ð¾Ðº",
+            MushroomType.orange_cap_boletus => "ÐŸÐ¾Ð´Ð¾ÑÐ¸Ð½Ð¾Ð²Ð¸Ðº",
+            MushroomType.saffron_milk_cap => "Ð Ñ‹Ð¶Ð¸Ðº",
+            MushroomType.yellow_mushroom => "Ð›Ð¸ÑÐ¸Ñ‡ÐºÐ°",
+            MushroomType.amanita => "ÐœÑƒÑ…Ð¾Ð¼Ð¾Ñ€",
+            MushroomType.umbrella_mushroom => "Ð‘Ð»ÐµÐ´Ð½Ð°Ñ Ð¿Ð¾Ð³Ð°Ð½ÐºÐ°",
+            _ => "ÐÐµ Ð³Ñ€Ð¸Ð±",
+        };
     }
 
     public static int Price(MushroomType type)
     {
-        switch (type)
+        return type switch
         {
-            case MushroomType.brown_cap_boletus:
-                return 1000;
-            case MushroomType.cep:
-                return 5000;
-            case MushroomType.moss_fly_mushroom:
-                return 2500;
-            case MushroomType.oily_mushroom:
-                return 900;
-            case MushroomType.orange_cap_boletus:
-                return 1500;
-            case MushroomType.saffron_milk_cap:
-                return 600;
-            case MushroomType.yellow_mushroom:
-                return 300;
-            case MushroomType.amanita:
-                return 10000;
-            case MushroomType.umbrella_mushroom:
-                return 99900;
-            default:
-                return 0;
-        }
+            MushroomType.brown_cap_boletus => 1000,
+            MushroomType.cep => 5000,
+            MushroomType.moss_fly_mushroom => 2500,
+            MushroomType.oily_mushroom => 900,
+            MushroomType.orange_cap_boletus => 1500,
+            MushroomType.saffron_milk_cap => 600,
+            MushroomType.yellow_mushroom => 300,
+            MushroomType.amanita => 10000,
+            MushroomType.umbrella_mushroom => 99900,
+            _ => 0,
+        };
     }
 }
 

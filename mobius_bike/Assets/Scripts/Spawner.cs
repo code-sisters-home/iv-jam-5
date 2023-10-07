@@ -45,7 +45,7 @@ public class Spawner : MonoBehaviour
     float timer = 0.0f;
     private void Update()
     {
-		if (UIMaster.Instance.IsMenu)
+		if (GameMaster.Instance.IsMenu)
 			return;
 		
 		timer += Time.deltaTime;

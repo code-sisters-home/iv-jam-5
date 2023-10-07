@@ -15,7 +15,6 @@ public class AudioManager : MonoBehaviour
     [SerializeField] private AudioClip collection_item_click;
 
     private Dictionary<SoundEvents, AudioClip> _clips = new Dictionary<SoundEvents, AudioClip>();
-
     public void Init()
     {
         _clips.Add(SoundEvents.menu_background, menu_background);    
@@ -24,6 +23,19 @@ public class AudioManager : MonoBehaviour
         _clips.Add(SoundEvents.close_click, close_click);    
         _clips.Add(SoundEvents.get_reward, get_reward);    
         _clips.Add(SoundEvents.collection_item_click, collection_item_click);    
+    }
+
+    public void OnGameStateChanged(GameState state)
+    {
+        switch (state)
+        {
+            case GameState.gameplay:
+                PlayMusic(SoundEvents.gameplay_background);
+                break;
+            case GameState.menu:
+                PlayMusic(SoundEvents.menu_background);
+                break;
+        }
     }
 
     public void PlaySound(SoundEvents soundEvent)

@@ -3,57 +3,39 @@ using UnityEngine.U2D;
 
 public class UIMaster : MonoBehaviour
 {
-    public static UIMaster Instance { get; private set; }
-    public AudioManager AudioManager { get; private set; }
-    public SpriteAtlas SpriteAtlas;
-    public Canvas Menu;
-    public Canvas Hud;
+    [SerializeField] private SpriteAtlas _spriteAtlas;
 
-    public GameState CurrentGameState { get; private set; }
-    public bool IsMenu => CurrentGameState == GameState.menu;
+    [Header("Canvases")]
+    [SerializeField] private Canvas _menu;
+    [SerializeField] private Canvas _hud;
 
-    private void Awake()
+    [Header("Screens")]
+    [SerializeField] private GameObject _achievementsScreen;
+    [SerializeField] private GameObject _collectionsScreen;
+
+    public void OnGameStateChanged(GameState state)
     {
-        if (Instance != null && Instance != this)
-        {
-            Destroy(this);
-            return;
-        }
-        Instance = this;
-
-        AudioManager = GetComponentInChildren<AudioManager>();
-        AudioManager.Init();
-
-        ChangeState(GameState.menu);
-    }
-
-    public void ChangeState(GameState state)
-    {
-        if (CurrentGameState == state)
-            return;
-        CurrentGameState = state;
-
         switch (state)
         {
             case GameState.gameplay:
-                AudioManager.PlayMusic(SoundEvents.gameplay_background);
-                Menu.gameObject.SetActive(false);
-                Hud.gameObject.SetActive(true);
+                _menu.gameObject.SetActive(false);
+                _hud.gameObject.SetActive(true);
                 break;
             case GameState.menu:
-                AudioManager.PlayMusic(SoundEvents.menu_background);
-                Menu.gameObject.SetActive(true);
-                Hud.gameObject.SetActive(false);
+                _menu.gameObject.SetActive(true);
+                _hud.gameObject.SetActive(false);
+                OnClose(_achievementsScreen);
+                OnClose(_collectionsScreen);
                 break;
         }
     }
 
-    public void StartGame() => ChangeState(GameState.gameplay);
-    public void Exit() => ChangeState(GameState.menu);
-}
+    public void StartGame() => GameMaster.Instance.ChangeState(GameState.gameplay);
+    public void Exit() => GameMaster.Instance.ChangeState(GameState.menu);
 
-public enum GameState
-{
-    gameplay,
-    menu
+    public void OnClose(GameObject obj) => obj.SetActive(false);
+
+    public void OnOpen(GameObject obj) => obj.SetActive(true);
+
+    public Sprite GetSprite(string spriteName) => _spriteAtlas.GetSprite(spriteName);
 }

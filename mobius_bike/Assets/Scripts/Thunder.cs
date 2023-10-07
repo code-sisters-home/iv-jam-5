@@ -15,7 +15,7 @@ public class Thunder : MonoBehaviour
 
     void Update()
     {
-		if (UIMaster.Instance.IsMenu)
+		if (GameMaster.Instance.IsMenu)
 		{
 			GetComponent<AudioSource>().Stop();
 			return;

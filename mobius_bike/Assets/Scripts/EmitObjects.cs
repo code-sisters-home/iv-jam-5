@@ -12,7 +12,7 @@ public class EmitObjects : MonoBehaviour
 
     void Update()
     {
-        if (UIMaster.Instance.IsMenu)
+        if (GameMaster.Instance.IsMenu)
             return;
         
         if (Time.time > nextSpawnTime)

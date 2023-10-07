@@ -9,6 +9,7 @@ public class GameMaster : MonoBehaviour
     public DropGenerator DropGenerator { get; private set; }
     public UIMaster UIMaster { get; private set; }
     public AudioManager AudioManager { get; private set; }
+    public CameraSwitcher CameraSwitcher { get; private set; }
 
     public GameState CurrentGameState { get; private set; }
     public Loading Loading { get; private set; }
@@ -33,6 +34,7 @@ public class GameMaster : MonoBehaviour
         DropGenerator = GetComponentInChildren<DropGenerator>();
         UIMaster = GetComponentInChildren<UIMaster>();
         AudioManager = GetComponentInChildren<AudioManager>();
+        CameraSwitcher = GetComponentInChildren<CameraSwitcher>();
 
         AudioManager = GetComponentInChildren<AudioManager>();
         AudioManager.Init();
@@ -51,5 +53,15 @@ public class GameMaster : MonoBehaviour
 
         AudioManager.OnGameStateChanged(state);
         UIMaster.OnGameStateChanged(state);
+
+        switch (state)
+        {
+            case GameState.gameplay:
+                CameraSwitcher.SwitchToFirstPerCamera();
+                break;
+            case GameState.menu:
+                //CameraSwitcher.SwitchToSelfieCamera();
+                break;
+        }
     }
 }

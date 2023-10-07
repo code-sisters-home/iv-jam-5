@@ -1473,6 +1473,21 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6649146344281444092, guid: 44149e5b31c7bda4ca868e05f258a028,
+        type: 3}
+      propertyPath: SelfieCamera
+      value: 
+      objectReference: {fileID: 7810443520198987076}
+    - target: {fileID: 6649146344281444092, guid: 44149e5b31c7bda4ca868e05f258a028,
+        type: 3}
+      propertyPath: FirstPerCamera
+      value: 
+      objectReference: {fileID: 4618421445957392495}
+    - target: {fileID: 6649146344281444095, guid: 44149e5b31c7bda4ca868e05f258a028,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 44149e5b31c7bda4ca868e05f258a028, type: 3}
 --- !u!223 &601275349 stripped
@@ -6728,7 +6743,12 @@ PrefabInstance:
     - target: {fileID: 4174560035327210319, guid: 13db890127f58b549aa37926b58299f1,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6028351339470834774, guid: 13db890127f58b549aa37926b58299f1,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6494442818754277091, guid: 13db890127f58b549aa37926b58299f1,
         type: 3}
@@ -6842,6 +6862,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 13db890127f58b549aa37926b58299f1, type: 3}
+--- !u!20 &7810443520198987076 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 154930639994249832, guid: 13db890127f58b549aa37926b58299f1,
+    type: 3}
+  m_PrefabInstance: {fileID: 7810443520198987075}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8005098332577157856
 PrefabInstance:
   m_ObjectHideFlags: 0

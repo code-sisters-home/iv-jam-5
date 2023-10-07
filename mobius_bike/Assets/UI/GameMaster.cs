@@ -32,6 +32,8 @@ public class GameMaster : MonoBehaviour
         Loading.FadeIn();
 
         Statistics = GetComponentInChildren<Statistics>();
+        Statistics.OnDied += () => ChangeState(GameState.menu);
+
         DropGenerator = GetComponentInChildren<DropGenerator>();
         UIMaster = GetComponentInChildren<UIMaster>();
         AudioManager = GetComponentInChildren<AudioManager>();
@@ -62,6 +64,7 @@ public class GameMaster : MonoBehaviour
                 break;
             case GameState.menu:
                 CameraSwitcher.SwitchToFirstPerCamera();
+                Statistics.GetLife(Statistics.MaxLifes);
                 break;
             case GameState.pause:
                 CameraSwitcher.SwitchToSelfieCamera();

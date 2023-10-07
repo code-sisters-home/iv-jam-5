@@ -58,7 +58,7 @@ public class FollowSpline : MonoBehaviour
 
     void Update()
     {
-		if (GameMaster.Instance.IsMenu)
+		if (!GameMaster.Instance.IsGameplay)
 			return;
 
 		bool isForward = Input.GetKey(KeyCode.W) && useControls;

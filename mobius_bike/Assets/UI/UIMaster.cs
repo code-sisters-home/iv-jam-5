@@ -12,6 +12,7 @@ public class UIMaster : MonoBehaviour
     [Header("Screens")]
     [SerializeField] private GameObject _achievementsScreen;
     [SerializeField] private GameObject _collectionsScreen;
+    [SerializeField] private GameObject _pauseScreen;
 
     public void OnGameStateChanged(GameState state)
     {
@@ -20,6 +21,7 @@ public class UIMaster : MonoBehaviour
             case GameState.gameplay:
                 _menu.gameObject.SetActive(false);
                 _hud.gameObject.SetActive(true);
+                OnClose(_pauseScreen);
                 break;
             case GameState.menu:
                 _menu.gameObject.SetActive(true);
@@ -27,11 +29,21 @@ public class UIMaster : MonoBehaviour
                 OnClose(_achievementsScreen);
                 OnClose(_collectionsScreen);
                 break;
+            case GameState.pause:
+                OnOpen(_pauseScreen);
+                break;
         }
     }
 
     public void StartGame() => GameMaster.Instance.ChangeState(GameState.gameplay);
     public void Exit() => GameMaster.Instance.ChangeState(GameState.menu);
+    public void Pause()
+    {
+        if(GameMaster.Instance.IsPaused)
+            GameMaster.Instance.ChangeState(GameState.gameplay);
+        else
+            GameMaster.Instance.ChangeState(GameState.pause);
+    }
 
     public void OnClose(GameObject obj) => obj.SetActive(false);
 

@@ -13,7 +13,8 @@ public class GameMaster : MonoBehaviour
 
     public GameState CurrentGameState { get; private set; }
     public Loading Loading { get; private set; }
-    public bool IsMenu => CurrentGameState == GameState.menu;
+    public bool IsGameplay => CurrentGameState == GameState.gameplay;
+    public bool IsPaused => CurrentGameState == GameState.pause;
 
     public bool IsReady { get; private set; }
 
@@ -60,7 +61,10 @@ public class GameMaster : MonoBehaviour
                 CameraSwitcher.SwitchToFirstPerCamera();
                 break;
             case GameState.menu:
-                //CameraSwitcher.SwitchToSelfieCamera();
+                CameraSwitcher.SwitchToFirstPerCamera();
+                break;
+            case GameState.pause:
+                CameraSwitcher.SwitchToSelfieCamera();
                 break;
         }
     }

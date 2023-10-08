@@ -74,3 +74,4 @@ crashlytics-build.properties
 mobius_bike/mobius_bike.zip
 mobius_bike/mobius_bike_without_ui.zip
 mobius_bike/mobius_bike_.zip
+*.zip

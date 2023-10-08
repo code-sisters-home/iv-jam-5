@@ -9,6 +9,7 @@ TagManager:
   - drop
   - lightning
   - sky_item
+  - lap
   layers:
   - Default
   - TransparentFX

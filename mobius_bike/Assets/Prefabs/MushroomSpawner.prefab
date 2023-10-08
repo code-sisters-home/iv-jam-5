@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8432335153926428079
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8432335153926428078}
+  - component: {fileID: 8432335153926428065}
+  m_Layer: 0
+  m_Name: MushroomSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8432335153926428078
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8432335153926428079}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8432335153926428065
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8432335153926428079}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5858c67fdaa81f4594343dadfaf19af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  path: {fileID: 0}
+  items:
+  - {fileID: 1602767070466665931, guid: 0d957f690c9a87c4e8fe7ccc259ca417, type: 3}
+  - {fileID: 7159254495154427299, guid: de9cc0ebd79cef147bdad58e39417027, type: 3}
+  - {fileID: 5102647351682970447, guid: bcb5a5d75d93d8644ae4991a88e49672, type: 3}
+  - {fileID: 5494610252524586692, guid: e70c3bf9a129d3b47b63a540d08edaf0, type: 3}
+  - {fileID: 6682099797819984323, guid: d178ae39d6389d94e80e7c4b106582ac, type: 3}
+  - {fileID: 6667007137072608869, guid: 0c12f8e34ece9b34ca0c8c21952e7be5, type: 3}
+  - {fileID: 3067173238502017832, guid: a3aec8b33768a6644b74c2ed22b9332a, type: 3}
+  - {fileID: 1510981059840399225, guid: cf94cdad8a3e0e84f9157363bee9f3d3, type: 3}
+  - {fileID: 5076953115960337936, guid: ac9129c16702ef04aba90cd1375c2bd2, type: 3}
+  dropPeriod: 2
+  tag: drop
+  roadWidth: 5

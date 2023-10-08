@@ -45,11 +45,22 @@ public class FollowSpline : MonoBehaviour
 		audioSource = GetComponent<AudioSource>();
 
 		dist = start;
-    }
+
+		{	//upright pose on start
+			PositionAndRotation pr = path.GetPositionAndRotation(dist);
+			transform.rotation = pr.rotation;
+
+			Vector3 vecTurn = transform.TransformDirection(shift * roadWidth * Vector3.right);
+			transform.position = pr.position + vecTurn;
+			transform.Rotate(0.0f, 0.0f, rot * 45.0f, Space.Self);
+		}		
+	}
 
     void Update()
     {
-	
+		if (!GameMaster.Instance.IsGameplay)
+			return;
+
 		bool isForward = Input.GetKey(KeyCode.W) && useControls;
 		bool isBackward = Input.GetKey(KeyCode.S) && useControls;
 		bool isLeft = Input.GetKey(KeyCode.A) && useControls;

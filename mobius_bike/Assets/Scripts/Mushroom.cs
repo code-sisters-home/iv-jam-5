@@ -7,6 +7,12 @@ public class Mushroom : MonoBehaviour
     [SerializeField] public MushroomType Type;
     [SerializeField] public Sprite Sprite;
     [SerializeField] public bool IsEdible;
+	public float lifetime = 10.5f;
+
+    void Start()
+    {
+		Destroy(gameObject, lifetime);
+    }
 
     public static string Name(MushroomType type)
     {

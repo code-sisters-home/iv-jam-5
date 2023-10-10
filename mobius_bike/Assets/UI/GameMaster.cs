@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Runtime.InteropServices;
 using UnityEngine;
 
 public class GameMaster : MonoBehaviour
@@ -17,6 +18,9 @@ public class GameMaster : MonoBehaviour
     public bool IsPaused => CurrentGameState == GameState.pause;
 
     public bool IsReady { get; private set; }
+
+    [DllImport("__Internal")]
+    private static extern void GP_GameStart();
 
     private IEnumerator Start()
     {
@@ -42,12 +46,22 @@ public class GameMaster : MonoBehaviour
         AudioManager = GetComponentInChildren<AudioManager>();
         AudioManager.Init();
 
+#if !UNITY_EDITOR && UNITY_WEBGL
+        GameStart();
+#endif
+
         IsReady = true;
+
         ChangeState(GameState.menu);
         yield return new WaitForSeconds(1);
         Loading.FadeOut();
     }
-    
+
+    public static void GameStart()
+    {
+        GP_GameStart();
+    }
+
     public void ChangeState(GameState state)
     {
         if (CurrentGameState == state)

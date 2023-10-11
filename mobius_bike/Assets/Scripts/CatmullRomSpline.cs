@@ -151,7 +151,7 @@ public class CatmullRomSpline : MonoBehaviour
 		int index = 0;
 		float t = 0;
 		positionAndRotation.position = GetClosestPosition(obj, ref index, ref t);
-		positionAndRotation.rotation = Quaternion.Lerp(GetPoint(index).rotation, GetPoint(index+1).rotation, t);
+		positionAndRotation.rotation = Quaternion.Lerp(GetPoint(index-1).rotation, GetPoint(index).rotation, t);
 		return positionAndRotation;
 	}
 
@@ -164,7 +164,7 @@ public class CatmullRomSpline : MonoBehaviour
 
 	public Vector3 GetClosestPosition(Transform obj, ref int closestIndex, ref float t)
 	{
-		closestIndex = 	GetClosestIndex(obj, true);
+		closestIndex = 	GetClosestIndex(obj, false);
 		Vector3 p0 = controlPointsList[ClampListPos(closestIndex - 2)].position;
 		Vector3 p1 = controlPointsList[ClampListPos(closestIndex - 1)].position;
 		Vector3 p2 = controlPointsList[ClampListPos(closestIndex)].position;

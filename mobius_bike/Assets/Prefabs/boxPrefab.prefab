@@ -46,7 +46,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1.5853778, y: 1, z: 1}
-  m_Center: {x: -0.0055482984, y: 0, z: 0}
+  m_Center: {x: -0.0055482984, y: 0.5, z: 0}
 --- !u!82 &9077579037866915997
 AudioSource:
   m_ObjectHideFlags: 0
@@ -163,7 +163,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 598f4ce5e46ed44419017ddb79518a4b,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 598f4ce5e46ed44419017ddb79518a4b,
         type: 3}

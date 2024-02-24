@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.10068366, g: 0.12507, b: 0.31771865, a: 1}
+  m_IndirectSpecularColor: {r: 0.08029469, g: 0.09969518, b: 0.30112675, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -4580,6 +4580,48 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2511bcd71d886ee438b29d96a0a4aa6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1760353277 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7810443520973216281, guid: 13db890127f58b549aa37926b58299f1,
+    type: 3}
+  m_PrefabInstance: {fileID: 7810443520198987075}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1760353279
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1760353277}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da7bd0b63d433584599e2785cc9c2f75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ikActive: 1
+  rightHandObj: {fileID: 0}
+  leftHandObj: {fileID: 0}
+  lookObj: {fileID: 0}
+--- !u!95 &1760353280
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1760353277}
+  m_Enabled: 0
+  m_Avatar: {fileID: 9000000, guid: 452ccff13456e72459d9f1c45701c133, type: 3}
+  m_Controller: {fileID: 9100000, guid: 30acea9995bea0f418f620122a452014, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1769597843 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3096837270804962383, guid: da960f4513fa4534c90fa3d4637693b3,

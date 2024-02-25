@@ -1,3 +1,5 @@
+using InstantGamesBridge;
+using InstantGamesBridge.Modules.Game;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -22,7 +24,27 @@ public class AudioManager : MonoBehaviour
         _clips.Add(SoundEvents.button_click, button_click);    
         _clips.Add(SoundEvents.close_click, close_click);    
         _clips.Add(SoundEvents.get_reward, get_reward);    
-        _clips.Add(SoundEvents.collection_item_click, collection_item_click);    
+        _clips.Add(SoundEvents.collection_item_click, collection_item_click);
+
+        _sounds.volume = 0.5f;
+
+        Bridge.game.visibilityStateChanged += OnGameVisibilityStateChanged;
+    }
+
+    private void OnGameVisibilityStateChanged(VisibilityState visibilityState)
+    {
+        switch (visibilityState)
+        {
+            case VisibilityState.Visible:
+                _music.Play();
+                _sounds.UnPause();
+                break;
+
+            case VisibilityState.Hidden:
+                _music.Pause();
+                _sounds.Pause();
+                break;
+        }
     }
 
     public void OnGameStateChanged(GameState state)

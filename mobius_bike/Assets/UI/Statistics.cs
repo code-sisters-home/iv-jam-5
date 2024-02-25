@@ -14,15 +14,37 @@ public class Statistics : MonoBehaviour
     public List<AchievementData> achievementDatas = new List<AchievementData>();
     public List<CollectionItemData> collectionDatas = new List<CollectionItemData>();
 
-    [NonSerialized] public int Gold = 100;
-    [NonSerialized] public int Gems = 10;
-    public int Lifes { get; private set; }
+    private int _gold = 100;
+    private int _life = 3;
+    public int Gold 
+    {
+        get => _gold;
+        set 
+        {
+            if(value != _gold)
+            {
+                _gold = value;
+                OnStatsChanged.Invoke();
+            }
+        }
+    }
+
+    public int Lifes 
+    {
+        get => _life;
+        set
+        {
+            if (value != _life)
+            {
+                _life = value;
+                OnStatsChanged.Invoke();
+            }
+        }
+    }
     public static int MaxLifes = 3;
 
     private void Awake()
     {
-        Lifes = MaxLifes;
-
         for (int i = 0; i < 5; i++)
         {
             var laps = i + 1;
@@ -46,7 +68,6 @@ public class Statistics : MonoBehaviour
         Gold += data.Reward;
         achievementDatas.Remove(data);
         OnAchievementsChanged();
-        OnStatsChanged();
     }
 
     public void GetMushroom(Mushroom mushroom)
@@ -81,7 +102,6 @@ public class Statistics : MonoBehaviour
     public void GetDamage()
     {
         Lifes--;
-        OnStatsChanged();
 
         if (Lifes == 0)
             OnDied();
@@ -89,9 +109,11 @@ public class Statistics : MonoBehaviour
 
     public void GetLife(int count)
     {
-        Lifes += count;
-        if (Lifes > MaxLifes)
-            Lifes = MaxLifes;
-        OnStatsChanged();
+        Lifes += count;        
+    }
+
+    public void GetMoney(int count)
+    {
+        Gold += count;
     }
 }

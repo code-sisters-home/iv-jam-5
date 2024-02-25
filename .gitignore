@@ -10,6 +10,8 @@
 /mobius_bike/[Ll]ogs/
 /mobius_bike/[Uu]ser[Ss]ettings/
 /mobius_bike/[Ww]eb/
+[Ee]xamples
+[Ee]xamples.meta
 
 # MemoryCaptures can get excessive in size.
 # They also could contain extremely sensitive data
@@ -61,6 +63,7 @@ sysinfo.txt
 *.aab
 *.unitypackage
 *.app
+[Bb]uilds
 
 # Crashlytics generated file
 crashlytics-build.properties
@@ -71,6 +74,7 @@ crashlytics-build.properties
 # Temporary auto-generated Android Assets
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
+
 mobius_bike/mobius_bike.zip
 mobius_bike/mobius_bike_without_ui.zip
 mobius_bike/mobius_bike_.zip

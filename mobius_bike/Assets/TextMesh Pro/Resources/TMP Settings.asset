@@ -15,13 +15,13 @@ MonoBehaviour:
   m_enableWordWrapping: 1
   m_enableKerning: 1
   m_enableExtraPadding: 0
-  m_enableTintAllSprites: 0
+  m_enableTintAllSprites: 1
   m_enableParseEscapeCharacters: 1
-  m_EnableRaycastTarget: 1
+  m_EnableRaycastTarget: 0
   m_GetFontFeaturesAtRuntime: 1
   m_missingGlyphCharacter: 0
   m_warningsDisabled: 0
-  m_defaultFontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_defaultFontAsset: {fileID: 11400000, guid: 957cef48c5c1f234c8b133babfbd35b4, type: 2}
   m_defaultFontAssetPath: Fonts & Materials/
   m_defaultFontSize: 36
   m_defaultAutoSizeMinRatio: 0.5
@@ -29,7 +29,9 @@ MonoBehaviour:
   m_defaultTextMeshProTextContainerSize: {x: 20, y: 5}
   m_defaultTextMeshProUITextContainerSize: {x: 200, y: 50}
   m_autoSizeTextContainer: 0
-  m_fallbackFontAssets: []
+  m_IsTextObjectScaleStatic: 0
+  m_fallbackFontAssets:
+  - {fileID: 11400000, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
   m_matchMaterialPreset: 1
   m_defaultSpriteAsset: {fileID: 11400000, guid: c41005c129ba4d66911b75229fd70b45,
     type: 2}

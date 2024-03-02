@@ -1,4 +1,4 @@
-﻿using CodeSisters.Logger;
+﻿using CodeSisters.Utils;
 using InstantGamesBridge;
 using InstantGamesBridge.Modules.Platform;
 using InstantGamesBridge.Modules.Player;
@@ -6,15 +6,12 @@ using System;
 using System.Collections;
 using UnityEngine;
 
-public class GameMaster : MonoBehaviour
+public class GameMaster : Singleton<GameMaster>
 {
-    public static GameMaster Instance { get; private set; }
-    
     public Statistics Statistics { get; private set; }
     public DropGenerator DropGenerator { get; private set; }
     public UIMaster UIMaster { get; private set; }
     public AudioManager AudioManager { get; private set; }
-    public CameraSwitcher CameraSwitcher { get; private set; }
 
     public GameState CurrentGameState { get; private set; }
     public Loading Loading { get; private set; }
@@ -25,13 +22,6 @@ public class GameMaster : MonoBehaviour
 
     private IEnumerator Start()
     {
-        if (Instance != null && Instance != this)
-        {
-            Destroy(this);
-            yield return null;
-        }
-        Instance = this;
-
         Loading = FindObjectOfType<Loading>(true);
         Loading.gameObject.SetActive(true);
         Loading.FadeIn();
@@ -42,18 +32,19 @@ public class GameMaster : MonoBehaviour
         DropGenerator = GetComponentInChildren<DropGenerator>();
         UIMaster = GetComponentInChildren<UIMaster>();
         AudioManager = GetComponentInChildren<AudioManager>();
-        CameraSwitcher = GetComponentInChildren<CameraSwitcher>();
 
         AudioManager = GetComponentInChildren<AudioManager>();
         AudioManager.Init();
 
-        
+        SceneLoader.Instance.LoadMenu();
+
+        yield return new WaitUntil(() => CameraSwitcher.Instance.IsReady);
+
         ChangeState(GameState.menu);
-        //yield return new WaitForSeconds(1);
         Loading.FadeOut();
 
         Bridge.platform.SendMessage(PlatformMessage.GameReady);
-        UnityLogger.Log($"GameReadyим п {DateTime.UtcNow}");
+        UnityLogger.Log($"GameReady {DateTime.UtcNow}");
 
         //если будем релизиться не на яндекс, то вставить проверку Bridge.player.isAuthorizationSupported
 
@@ -163,14 +154,14 @@ public class GameMaster : MonoBehaviour
         switch (state)
         {
             case GameState.gameplay:
-                CameraSwitcher.SwitchToFirstPerCamera();
+                CameraSwitcher.Instance.SwitchCamera(CameraType.FirstPerson);
                 break;
             case GameState.menu:
-                CameraSwitcher.SwitchToFirstPerCamera();
+                CameraSwitcher.Instance.SwitchCamera(CameraType.Menu);
                 Statistics.GetLife(Statistics.MaxLifes);
                 break;
             case GameState.pause:
-                CameraSwitcher.SwitchToSelfieCamera();
+                CameraSwitcher.Instance.SwitchCamera(CameraType.Selfie);
                 break;
         }
     }

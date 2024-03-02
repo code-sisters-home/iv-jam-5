@@ -35,8 +35,19 @@ public class UIMaster : MonoBehaviour
         }
     }
 
-    public void StartGame() => GameMaster.Instance.ChangeState(GameState.gameplay);
-    public void Exit() => GameMaster.Instance.ChangeState(GameState.menu);
+    public void StartGame()
+    {
+        SceneLoader.Instance.LoadCosmos();
+        GameMaster.Instance.ChangeState(GameState.gameplay);
+    }
+    public void Exit() 
+    {
+        if (GameMaster.Instance.CurrentGameState == GameState.menu)
+            return;
+        SceneLoader.Instance.LoadMenu();
+        GameMaster.Instance.ChangeState(GameState.menu);
+    }
+
     public void Pause()
     {
         if(GameMaster.Instance.IsPaused)
@@ -48,6 +59,7 @@ public class UIMaster : MonoBehaviour
     public void OnClose(GameObject obj) => obj.SetActive(false);
 
     public void OnOpen(GameObject obj) => obj.SetActive(true);
+    public void OpenCollection() => _collectionsScreen.SetActive(true);
 
     public Sprite GetSprite(string spriteName) => _spriteAtlas.GetSprite(spriteName);
 }

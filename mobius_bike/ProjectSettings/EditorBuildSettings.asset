@@ -8,7 +8,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Main.unity
     guid: 399b15e28feb30648b9b4696a2969e16
-  - enabled: 0
-    path: Assets/~Examples/Scenes/Example.unity
-    guid: 9d64d6244c8ed6f4899d21bd60793a59
+  - enabled: 1
+    path: Assets/Scenes/Gameplay_Cosmos.unity
+    guid: 9479ec5b4c43ccc40ab78670ff9ff64d
+  - enabled: 1
+    path: Assets/Scenes/Gameplay_Menu.unity
+    guid: 46fe76e00742f98489c4bee355a11881
   m_configObjects: {}

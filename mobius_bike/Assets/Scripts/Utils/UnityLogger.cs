@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace CodeSisters.Logger
+namespace CodeSisters.Utils
 {
     public class UnityLogger : MonoBehaviour
     {
@@ -13,6 +13,18 @@ namespace CodeSisters.Logger
                 Debug.Log(message);
             else
                 Console.WriteLine(message);
+        }
+
+        public static void LogError(string message)
+        {
+            if (Application.isEditor)
+                Debug.LogError($"<color=red>{message}</color>");
+            else
+            {
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine(message);
+                Console.ResetColor();
+            }
         }
     }
 }

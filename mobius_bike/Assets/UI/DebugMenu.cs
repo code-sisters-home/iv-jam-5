@@ -1,4 +1,4 @@
-using CodeSisters.Logger;
+using CodeSisters.Utils;
 using InstantGamesBridge;
 using System;
 using System.Collections;

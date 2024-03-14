@@ -9,6 +9,7 @@ public class DebugMenu : MonoBehaviour
 {
     public void IncreaseLaps() => GameMaster.Instance.Statistics.IncreaseLaps();
     public void GetCollectionItem() => GameMaster.Instance.Statistics.GetCollectionItem();
+    public void GetMushroom() => GameMaster.Instance.Statistics.GetMushroom();
     public void DropItem() => GameMaster.Instance.DropGenerator.DropSomething();
 
     public void GetDamage() => GameMaster.Instance.Statistics.GetDamage();

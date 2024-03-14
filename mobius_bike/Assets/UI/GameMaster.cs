@@ -128,14 +128,14 @@ public class GameMaster : Singleton<GameMaster>
         UnityLogger.Log($"IsReady {IsReady}");
     }
 
-    //private void OnApplicationFocus(bool focus)
-    //{
-    //    if(!focus)
-    //    {
-    //        UnityLogger.Log($"OnApplicationFocus: {focus}");
-    //        Bridge.storage.Set("gold", GameMaster.Instance.Statistics.Gold, OnStorageSetCompleted);
-    //    }
-    //}
+    private void OnApplicationFocus(bool focus)
+    {
+        if (!focus)
+        {
+            UnityLogger.Log($"OnApplicationFocus: {focus}");
+            Bridge.storage.Set("gold", Instance.Statistics.Gold, OnStorageSetCompleted);
+        }
+    }
 
     private void OnStorageSetCompleted(bool success)
     {

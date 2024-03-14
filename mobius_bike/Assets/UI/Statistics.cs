@@ -1,8 +1,9 @@
-using System;
+Ôªøusing System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.Assertions;
 
 public class Statistics : MonoBehaviour
 {
@@ -49,7 +50,7 @@ public class Statistics : MonoBehaviour
         {
             var laps = i + 1;
             achievementDatas.Add(new AchievementData(
-                text: $"œÓÂ‰¸ {laps} ÍÛ„Ó‚!", 
+                text: $"–ü—Ä–æ–µ–¥—å {laps} –∫—Ä—É–≥–æ–≤!", 
                 maxAmount: laps,
                 reward: laps * 10));
         }
@@ -72,12 +73,33 @@ public class Statistics : MonoBehaviour
 
     public void GetMushroom(Mushroom mushroom)
     {
-        var isEdible = mushroom.IsEdible ? "—˙Â‰Ó·Ì˚È" : "ﬂ‰Ó‚ËÚ˚È";
+        var isEdible = mushroom.IsEdible ? "–°—ä–µ–¥–æ–±–Ω—ã–π" : "–Ø–¥–æ–≤–∏—Ç—ã–π";
         collectionDatas.Add(new CollectionItemData(
             text: Mushroom.Name(mushroom.Type)+"\n"+ isEdible,
-            iconName: mushroom.Sprite.name,
+            iconName: Mushroom.Sprite(mushroom.Type),
             price: Mushroom.Price(mushroom.Type)
             ));
+        OnCollectionChanged();
+    }
+
+    public void GetMushroom()
+    {
+        var mushroomType = Mushroom.RandomMushroomType();
+        var isEdible = Mushroom.IsEdibleType(mushroomType) ? "<color=green>–°—ä–µ–¥–æ–±–Ω—ã–π</color>" : "<color=red>–Ø–¥–æ–≤–∏—Ç—ã–π</color>";
+        collectionDatas.Add(new CollectionItemData(
+            text: Mushroom.Name(mushroomType) + "\n<size=80%>" + isEdible,
+            iconName: Mushroom.Sprite(mushroomType),
+            price: Mushroom.Price(mushroomType)
+            ));
+        OnCollectionChanged();
+    }
+
+    public void SellMushroom(Guid id)
+    {
+        var itemToRemove = collectionDatas.FirstOrDefault(_ => _.Id == id);
+        Assert.IsNotNull(itemToRemove, $"item data '{id}' not found");
+        collectionDatas.Remove(itemToRemove);
+        Gold += itemToRemove.Price;
         OnCollectionChanged();
     }
 

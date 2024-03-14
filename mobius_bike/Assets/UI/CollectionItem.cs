@@ -1,17 +1,23 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class CollectionItem : MonoBehaviour
 {
+    public Action<Guid> OnItemClicked = (id) => { };
+    
+    [SerializeField] public Selectable selectable;
+
     [SerializeField] private TextMeshProUGUI _name;
     [SerializeField] private TextMeshProUGUI _price;
     [SerializeField] private Image _icon;
 
     private CollectionItemData _data;
+
+    public Guid Id => _data.Id;
+    public string Name => _data.Text;
+    public int Price => _data.Price;
 
     internal void Init(CollectionItemData data)
     {
@@ -19,7 +25,11 @@ public class CollectionItem : MonoBehaviour
         _name.SetText(data.Text);
         _price.SetText("{0}", data.Price);
         _icon.sprite = GameMaster.Instance.UIMaster.GetSprite(data.IconName);
+
+        selectable.SetSelected(false);
     }
+
+    public void OnClick() => OnItemClicked?.Invoke(_data.Id);
 }
 
 public class CollectionItemData

@@ -1,13 +1,14 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Mushroom : MonoBehaviour
 {
     [SerializeField] public MushroomType Type;
-    [SerializeField] public Sprite Sprite;
-    [SerializeField] public bool IsEdible;
+    
 	public float lifetime = 10.5f;
+    public bool IsEdible => IsEdibleType(Type);
 
     void Start()
     {
@@ -31,6 +32,40 @@ public class Mushroom : MonoBehaviour
         };
     }
 
+    public static string Sprite(MushroomType type)
+    {
+        return type switch
+        {
+            MushroomType.brown_cap_boletus => "1_brown_cap",
+            MushroomType.cep => "2_cep",
+            MushroomType.moss_fly_mushroom => "3_moss",
+            MushroomType.oily_mushroom => "4_oily",
+            MushroomType.orange_cap_boletus => "5_orange",
+            MushroomType.saffron_milk_cap => "6_saffron",
+            MushroomType.yellow_mushroom => "7_yellow",
+            MushroomType.amanita => "8_amanita",
+            MushroomType.umbrella_mushroom => "9_umbrella",
+            _ => "Не гриб",
+        };
+    }
+
+    public static bool IsEdibleType(MushroomType type)
+    {
+        return type switch
+        {
+            MushroomType.brown_cap_boletus => true,
+            MushroomType.cep => true,
+            MushroomType.moss_fly_mushroom => true,
+            MushroomType.oily_mushroom => true,
+            MushroomType.orange_cap_boletus => true,
+            MushroomType.saffron_milk_cap => true,
+            MushroomType.yellow_mushroom => true,
+            MushroomType.amanita => false,
+            MushroomType.umbrella_mushroom => false,
+            _ => false,
+        };
+    }
+
     public static int Price(MushroomType type)
     {
         return type switch
@@ -47,6 +82,11 @@ public class Mushroom : MonoBehaviour
             _ => 0,
         };
     }
+
+    public static MushroomType RandomMushroomType()
+    {
+        return (MushroomType) UnityEngine.Random.Range(0, (int)MushroomType.count-1);
+    }
 }
 
 public enum MushroomType
@@ -59,5 +99,8 @@ public enum MushroomType
     saffron_milk_cap,
     yellow_mushroom,
     amanita,
-    umbrella_mushroom
+    umbrella_mushroom,
+    count //всегда последний
 }
+
+
